@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Models;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class Jemat extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+            'kode_keluarga',
+            'no_induk',
+            'nama_lengkap',
+            'nama_keluarga',
+            'jenis_kelamin',
+            'hubungan_keluarga',
+            'tempat_lahir',
+            'tgl_lahir',
+            'tempat_baptis',
+            'tgl_baptis',
+            'tempat_sidi',
+            'tgl_sidi',
+            'tgl_nikah_gereja',
+            'tgl_nikah_sipil',
+            'golongan_darah',
+            'pendidikan_terakhir',
+            'status_pelkat',
+            'sektor',
+            'keterangan',
+    ];
+
+    public function scopeActivePklu($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 60');
+    }
+
+    public function scopeActivePkbPkp($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 61')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 18')
+            ->WhereNotNull('tgl_nikah_gereja');     
+    }
+
+    public function scopeActiveGp($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 36')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 18')
+            ->WhereNull('tgl_nikah_gereja');     
+    }
+
+    public function scopeActivePt($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 19')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 10')
+            ->WhereNull('tgl_nikah_gereja');     
+    }
+
+    public function scopeActivePa($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 11')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) >= 0')
+            ->WhereNull('tgl_nikah_gereja');     
+    }
+    
+    public function getAgeAttribute()
+    {
+        return Carbon::parse($this->attributes['tgl_lahir'])->age; // calculate age
+    }
+}
