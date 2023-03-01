@@ -95,8 +95,8 @@
         <!-- /.this is sidebar -->
         @if (Auth::user()->is_admin == 1)
             @include('admin-layout.sidebar_admin')
-        @elseif (Auth::user()->is_admin == 5)
-            @include('admin-layout.sidebar_other')
+        @elseif (Auth::user()->is_admin == 2)
+            @include('admin-layout.sidebar_jemat')
         @else
             @include('admin-layout.sidebar')
         @endif
@@ -134,10 +134,10 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2021<?= (date('Y') > 2021 ? ' - ' . date('Y') : '') ?> | KPI System | </strong> All rights
+            <strong>Copyright &copy; 2023<?= (date('Y') > 2021 ? ' - ' . date('Y') : '') ?> | Komisi Inforkom Litbang GPIB Sangkakala | </strong> All rights
             reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1.4
+                <b>Version</b> 1.0.0
             </div>
         </footer>
 

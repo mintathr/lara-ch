@@ -47,15 +47,17 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $inputVal = $request->all();
+        $a = '08.01-01-';//0001-01
+        $b = $a.$inputVal['email'];
 
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required|min:8',
         ]);
 
-        if (auth()->attempt(array('email' => $inputVal['email'], 'password' => $inputVal['password']))) {
+        if (auth()->attempt(array('email' => $b, 'password' => $inputVal['password']))) {
             $cek_tgl_ubah = User::where([
-                ['email', '=', $inputVal['email']]
+                ['email', '=', $b]
             ])->first();
 
             $last_change = Carbon::parse($cek_tgl_ubah->last_change);
@@ -69,7 +71,7 @@ class LoginController extends Controller
                 return redirect()->route('login')
                     ->with('error', 'Email Terblokir!.');
             } elseif (auth()->user()->is_admin == 1 and auth()->user()->block <= 2) {
-                User::where('email', $inputVal['email'])->update([
+                User::where('email', $b)->update([
                     'block' => 0,
                 ]);
 
@@ -84,7 +86,7 @@ class LoginController extends Controller
                     return redirect()->route('changePasswordExp');
                 } */
             } elseif (auth()->user()->is_admin == 0 and auth()->user()->block <= 2) {
-                User::where('email', $inputVal['email'])->update([
+                User::where('email', $b)->update([
                     'block' => 0,
                 ]);
                 if ($inputVal['password'] == "P@ssw0rd") {
@@ -97,8 +99,8 @@ class LoginController extends Controller
                 } else {
                     return redirect()->route('changePasswordExp');
                 }
-            } elseif (auth()->user()->is_admin == 5 and auth()->user()->block <= 2) {
-                User::where('email', $inputVal['email'])->update([
+            } elseif (auth()->user()->is_admin == 2 and auth()->user()->block <= 2) {
+                User::where('email', $b)->update([
                     'block' => 0,
                 ]);
                 if ($inputVal['password'] == "P@ssw0rd") {
@@ -107,15 +109,15 @@ class LoginController extends Controller
 
                 if ($selisih_hari <= 90) {
                     Alert::toast('Login Berhasil', 'success')->width('25rem')->padding('5px');
-                    return redirect()->route('guest.route');
+                    return redirect()->route('jemat.route');
                 } else {
                     return redirect()->route('changePasswordExp');
                 }
             }
         } else {
-            $cek_block = User::where([
-                ['email', '=', $inputVal['email']]
-            ])->first();
+            if($cek_block = User::where([
+                ['email', '=', $b]
+            ])->first()){
             $awal_block = $cek_block['block'];
 
             if ($awal_block >= 3) {
@@ -124,8 +126,9 @@ class LoginController extends Controller
                     ->with('error', 'Email Terblokir!.');
             }
 
-            User::where('email', $inputVal['email'])
+            User::where('email', $b)
                 ->update(['block' => $awal_block + 1]);
+        }
             return redirect()->route('login')
                 ->with('error', 'Email & Password Salah!.');
         }

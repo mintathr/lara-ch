@@ -59,16 +59,16 @@
             @endif
             
             <form action="{{ route('login') }}" method="post">
-                <h1 class="mb-5">Score Card System</h1>
+                <h1 class="mb-5">DBsystem</h1>
                 @csrf
                 <div>
-                    <input type="text" name="email" class="form-control" placeholder="NIK" value="{{ old('user_id') }}">
+                    <input type="text" name="email" class="form-control" placeholder="Nomor Jemaat" value="{{ old('email') }}">
                 </div>
-                <div>
-                    <input type="password" name="password" value="semangat" class="form-control upass" placeholder="NIK">
+                <!-- <div>
+                    <input type="password" name="password" value="semangat" class="form-control upass" placeholder="Password"> -->
                     
-                    <input type="checkbox" class="flat_check"> Show Password
-                </div>
+                    <!-- <input type="checkbox" class="flat_check"> Show Password -->
+                <!-- </div> -->
                 {{-- <div class="mylogin">
                     <ul>
                         <li>

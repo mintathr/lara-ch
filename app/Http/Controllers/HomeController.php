@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Jemat;
 use Illuminate\Http\Request;
+use App\Traits\{
+    HelperListTrait,
+    HelperMonthTrait
+};
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    
+    use HelperMonthTrait, HelperListTrait;
     /**
      * Create a new controller instance.
      *
@@ -26,6 +31,98 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function handleJemat()
+    {
+        $jemat = Jemat::where('no_induk', Auth::user()->email)->first();
+        $kode_hub_keluarga = substr($jemat->no_induk,-2);
+        
+/* 01	Kepala Keluarga
+02	Istri
+31	Anak ke 1
+32	Anak ke 2
+3x	dst
+04	Orang Tua
+05	Cucu
+06	Kakak/ Adik Kandung
+07	Menantu
+08	Family Lain */
+
+        if($jemat->hubungan_keluarga == 'KK'){
+            $hub_kel = 'Kepala Keluarga';
+        }elseif($jemat->hubungan_keluarga == 'IS'){
+            $hub_kel = 'Istri';
+        }elseif($jemat->hubungan_keluarga == 'AN'){
+            $hub_kel = 'Anak ke-'.$kode_hub_keluarga;
+        }elseif($jemat->hubungan_keluarga == 'OT'){
+            $hub_kel = 'Orang Tua';
+        }elseif($jemat->hubungan_keluarga == 'CU'){
+            $hub_kel = 'Cucu';
+        }elseif($jemat->hubungan_keluarga == 'KA'){
+            $hub_kel = 'Kakak/ Adik Kandung';
+        }elseif($jemat->hubungan_keluarga == 'MN'){
+            $hub_kel = 'Menantu';
+        }elseif($jemat->hubungan_keluarga == 'FA'){
+            $hub_kel = 'FA';
+        }
+        
+        $pendidikan = $this->listKategori()['pendidikan'];
+        $gol_dar    = $this->listKategori()['gol_dar'];
+        return view('jemat.home', compact('jemat', 'hub_kel', 'pendidikan', 'gol_dar'));
+    }
+
+    public function updateJemat(Request $request, $id)
+    {
+        $messages = [
+            'nama_lengkap.required'             => 'Nama Harus Diisi!',
+            'nama_lengkap.regex'                => 'Format Salah',
+            'tempat_lahir.required'             => 'Tempat Lahir Harus Diisi!',
+            'tempat_lahir.regex'                => 'Format Salah',
+            'tgl_lahir.required'                => 'Tanggal Lahir Harus Diisi!',
+            'tempat_baptis.required'            => 'Tempat Baptis Harus Diisi!',
+            'tempat_baptis.regex'               => 'Format Salah',
+            'tgl_baptis.required'               => 'Tanggal Baptis Harus Diisi!',
+            'tempat_sidi.required'              => 'Tempat Sidi Harus Diisi!',
+            #'tempat_sidi.regex'                 => 'Format Salah',
+            #'tgl_sidi.required'                 => 'Tanggal Sidi Harus Diisi!',
+            #'tgl_nikah_gereja.required'         => 'Tanggal Nikah Gereja Harus Diisi!',
+            #'tgl_nikah_sipil.required'          => 'Tanggal Nikah Sipil Harus Diisi!',
+            'pendidikan_terakhir.required'      => 'Pendidikan Terakhir Harus Diisi!',
+            'golongan_darah.required'           => 'Golongan Darah Harus Diisi!',
+            'jenis_kelamin.required'            => 'Jenis Kelamin Harus Diisi!',
+            'sektor.required'                   => 'Sektor Harus Diisi!',
+        ];
+
+        $request->validate([
+            'nama_lengkap'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
+            'tempat_lahir'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
+            'tgl_lahir'         => 'required',
+            'tempat_baptis'     => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
+            'tgl_baptis'        => 'required',
+            #'tempat_sidi'       => 'required|regex:/(^([0-9]+)(\d+)?$)/u|min:10|max:10',
+            #'tgl_sidi'          => 'required',
+            #'tgl_nikah_gereja'  => 'required',
+            #'tgl_nikah_sipil'   => 'required',
+            'pendidikan_terakhir' => 'required',
+            'golongan_darah'    => 'required',
+            'jenis_kelamin'     => 'required',
+            'sektor'            => 'required',
+
+        ], $messages);
+
+        $jemat = Jemat::findOrFail($id);
+        #$jemat->nama_lengkap = $request->nama_lengkap;
+        #$jemat->save();
+        try {
+            $jemat->update($request->all());
+            Alert::toast('Data Anda Berhasil Di Update.', 'success')->width('25rem')->padding('5px');
+        } catch (ModelNotFoundException $exception) {
+            return back()->withError($exception->getMessage())->withInput();
+        }
+        
+        return redirect()->route('jemat.upload.create');
+
     }
 
     public function handleAdmin()
@@ -83,18 +180,21 @@ class HomeController extends Controller
         /* $pkluMaleUsers = Jemat::whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 60')
             ->where('jenis_kelamin', '=', 'L')
             ->get();
+
         $pkbUsers = Jemat::whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 20')
             ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 61')
             ->orWhereNotNull('tgl_nikah_gereja')
             ->where('jenis_kelamin', '=', 'L')
             ->get();
         $sum_pkb = $pkbUsers->count();
+
         $pkpUsers = Jemat::whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 20')
             ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 61')
             ->orWhereNotNull('tgl_nikah_gereja')
             ->where('jenis_kelamin', '=', 'P')
             ->get();
         $sum_pkp = $pkpUsers->count();
+
         $gpUsers = Jemat::whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 18')
             ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 36')
             ->WhereNull('tgl_nikah_gereja')
