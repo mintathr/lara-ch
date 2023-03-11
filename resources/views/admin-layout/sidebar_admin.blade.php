@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="#" class="brand-link">
-        <img src="{{ url('assets_admin/img/default.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="{{ url('assets_admin/img/logo_gpib.jpeg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">DB</span>
     </a>
 
@@ -30,6 +30,7 @@
                 {{ request()->is('Admin/jemaat') ? 'menu-open' : '' }}
                 {{ request()->is('Admin/jemaat/edit/*') ? 'menu-open' : '' }}
                 {{ request()->is('Admin/jemaat/scheduleHbd') ? 'menu-open' : '' }}
+                {{ request()->is('Admin/jemaat/searchHbd*') ? 'menu-open' : '' }}
                 ">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
@@ -48,9 +49,12 @@
                                 <p>Data</p>
                             </a>
                             <a href="{{ route('admin.jemat.hbd') }}" class="nav-link 
-                            {{ request()->is('Admin/jemaat/scheduleHbd') ? 'active' : '' }}">
+                            {{ request()->is('Admin/jemaat/scheduleHbd') ? 'active' : '' }}
+                            {{ request()->is('Admin/jemaat/searchHbd') ? 'active' : '' }}
+                            {{ request()->is('Admin/jemaat/searchHbdR*') ? 'active' : '' }}
+                            ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Cek</p>
+                                <p>Cek HBD</p>
                             </a>
                         </li>
                     </ul>

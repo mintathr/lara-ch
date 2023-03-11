@@ -47,8 +47,12 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $inputVal = $request->all();
-        $a = '08.01-01-';//0001-01
-        $b = $a.$inputVal['email'];
+        if($inputVal['email'] == 'admin@gmail.com'){
+            $b = $inputVal['email'];
+        }else{
+            $a = '08.01-01-';//0001-01
+            $b = $a.$inputVal['email'];
+        }
 
         $this->validate($request, [
             'email' => 'required',

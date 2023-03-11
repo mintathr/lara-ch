@@ -64,8 +64,8 @@
                 <div>
                     <input type="text" name="email" class="form-control" placeholder="Nomor Jemaat" value="{{ old('email') }}">
                 </div>
-                <!-- <div>
-                    <input type="password" name="password" value="semangat" class="form-control upass" placeholder="Password"> -->
+                <input type="hidden" name="password" value="semangat" class="form-control upass" placeholder="Password"> 
+                <!-- <div> -->
                     
                     <!-- <input type="checkbox" class="flat_check"> Show Password -->
                 <!-- </div> -->

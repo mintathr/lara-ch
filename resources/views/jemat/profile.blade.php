@@ -5,6 +5,15 @@
 @section('content')
 
 <div class="container-fluid">
+    <div class="callout callout-warning">
+        <h5><i class="icon fas fa-bullhorn"></i> info!</h5>
+        <ul>
+            <li>update alamat hanya bisa dilakukan oleh kepala keluarga.</li>
+            <li>view profile (keluarga) hanya bisa dilihat oleh kepala keluarga</li> 
+
+        </ul>
+            
+    </div>
     <div class="row">
         <div class="col-md-3">
             <div class="card card-primary card-outline">
@@ -41,6 +50,43 @@
 
             <div class="card card-primary">
                 <div class="card-header">
+                  <h3 class="card-title">Alamat Tempat Tinggal</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <strong><i class="fas fa-map-marked-alt mr-1"></i> Kota/ Kabupaten</strong>
+  
+                  <p class="text-muted">
+                    {{ $jemat->regency->name }}
+                  </p>
+  
+                  <hr>
+  
+                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Kecamatan</strong>
+  
+                  <p class="text-muted">{{ $jemat->district->name }}</p>
+  
+                  <hr>
+  
+                  <strong><i class="fas fa-map-marker mr-1"></i> Kelurahan</strong>
+  
+                  <p class="text-muted">
+                    <span class="tag tag-danger">{{ $jemat->village->name }}</span>
+                  </p>
+  
+                  <hr>
+  
+                  <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+  
+                  <p class="text-muted">{{ $jemat->alamat }}</p>
+                </div>
+                @if($jemat->hubungan_keluarga == 'KK')
+                <a href="profile/{{ $jemat->nama_keluarga }}" class="btn btn-primary btn-block"><b>Update Alamat</b></a>
+                @endif
+              </div>
+
+            <div class="card card-info">
+                <div class="card-header">
                     <h3 class="card-title">Lampiran File</h3>
                 </div>
                 <div class="card-body">
@@ -69,6 +115,7 @@
                                 <th>Hubungan Keluarga</th>
                                 <th>Tanggal Lahir</th>
                                 <th>Pelkat</th>
+                                <th>#</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,6 +126,9 @@
                                 <td>{{ $list->hubungan_keluarga }}</td>
                                 <td>{{ $list->tgl_lahir }}</td>
                                 <td>{{ $list->status_pelkat }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary">view</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

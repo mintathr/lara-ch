@@ -6,7 +6,9 @@ use Carbon\Carbon;
 use App\Models\Jemat;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
-use App\Traits\HelperMonthTrait;
+use App\Traits\{HelperMonthTrait,
+    HelperListTrait
+};
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
@@ -15,7 +17,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class JematController extends Controller
 {
-    use HelperMonthTrait;
+    use HelperMonthTrait, HelperListTrait;
 
     public function __construct()
     {
@@ -41,6 +43,7 @@ class JematController extends Controller
         
         $cekHbd = Jemat::select('nama_lengkap', 'tgl_lahir')
             ->whereBetween(DB::raw("(DATE_FORMAT(tgl_lahir,'%m-%d'))"), [$from,$to])
+            ->orderBy('tgl_lahir', 'ASC')
             ->get();
         
         $cekMarriage = Jemat::select('nama_lengkap', 'tgl_nikah_gereja')
@@ -62,9 +65,12 @@ class JematController extends Controller
     {
         $decrypted = Crypt::decryptString($id);
         $jemat = Jemat::findOrFail($decrypted);
+        $statusAktif    = $this->listKategori()['statusAktif'];
+
         return view('sysadmin.jemat.edit', [
             'jemat'     => $jemat,
-            'id'        => $id
+            'id'        => $id,
+            'statusAktif'        => $statusAktif
         ]);
     }
 
@@ -89,7 +95,41 @@ class JematController extends Controller
                 return back()->withError($exception->getMessage())->withInput();
             }
             return redirect()->route('admin.jemat');
+    }
+
+    public function getSearchCekHbd(Request $request)
+    {
+        if(!empty($request->tanggal_pencarian)){
+            $x = explode(" ",$request->tanggal_pencarian);
+            $y = explode("-",$request->tanggal_pencarian);
+            $fromDate   = $y[1].'-'.$y[2];
+            $toDate     = $y[4].'-'.$y[5];
+            $dari_tgl   = $x[0]; 
+            $sampai_tgl = $x[2]; 
+
+      
+            $range_lahir = DB::table('jemats')->select('nama_lengkap', 'tgl_lahir', 'tgl_nikah_gereja')
+                ->whereBetween(DB::raw("DATE_FORMAT(tgl_lahir, '%m-%d')"), [$fromDate, $toDate])
+                ->orderByRaw('DAY(tgl_lahir)')
+                ->get();
+        
+            $range_nikah = DB::table('jemats')->select('nama_lengkap', 'tgl_lahir', 'tgl_nikah_gereja')
+                ->WhereBetween(DB::raw("DATE_FORMAT(tgl_nikah_gereja, '%m-%d')"), [$fromDate, $toDate])
+                ->orderByRaw('DAY(tgl_nikah_gereja)')
+                ->get();
+            
+            return view('sysadmin.jemat.search_hbd', [
+                'tanggal_pencarian'     => $request->tanggal_pencarian,
+                'range_lahir'           => $range_lahir,
+                'range_nikah'           => $range_nikah,
+                'dari_tgl'              => $dari_tgl,
+                'sampai_tgl'            => $sampai_tgl,
+                'dt'                    => $this->cekMonth()['dt']
+            ]);
+        }else{
+            return view('sysadmin.jemat.search_hbd');
         }
+    }
         
     
 }

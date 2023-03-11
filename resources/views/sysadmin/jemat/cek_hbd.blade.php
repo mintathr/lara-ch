@@ -1,9 +1,13 @@
 @extends('admin-layout.main')
-@section('title', 'Home')
-@section('subtitle', 'Home')
+@section('title', 'Cek HBD')
+@section('subtitle', 'Cek HBD')
 
 @section('content')
-
+<div class="row">
+<a href="{{ route('admin.jemat.searchHbd') }}" class="btn btn-app">
+    <i class="fas fa-search"></i> Search
+  </a>
+</div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="card card-outline card-info">
@@ -15,8 +19,8 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
-                                <th>Nama</th>
                                 <th>BoD</th>
+                                <th>Nama</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,8 +31,8 @@
                                 <tr>
                                 @endif
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ date('d-m-Y', strtotime($hbd->tgl_lahir)) }}</td>
                                 <td>{{ $hbd->nama_lengkap }}</td>
-                                <td>{{ $hbd->tgl_lahir }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

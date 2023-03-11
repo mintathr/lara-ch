@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DependantController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
 use App\Http\Controllers\sysadmin\JematController;
@@ -47,12 +48,17 @@ Route::prefix('Jemat')->group(function () {
         ########## ==PARAM DATE= ##########
         Route::get('home', [HomeController::class, 'handleJemat'])->name('jemat.route');
         Route::patch('home/{id}', [HomeController::class, 'updateJemat'])->name('jemat.update');
+        
         Route::get('upload', [UploadController::class, 'create'])->name('jemat.upload.create');
         Route::post('upload', [UploadController::class, 'store'])->name('jemat.upload.store');
         Route::delete('upload', [UploadController::class, 'delete'])->name('jemat.upload.delete');
         Route::get('profile', [ProfileController::class, 'index'])->name('jemat.profile');
         Route::get('profile/download/{temporaryfile}', [ProfileController::class, 'getDownload']);
+        Route::get('profile/{jemat:nama_keluarga}', [HomeController::class, 'editAlamat']); 
+        Route::patch('profile/{id}', [HomeController::class, 'updateAlamat'])->name('jemat.update.alamat');
         
+        Route::get('getDistricts/{id}', [DependantController::class, 'getDistricts']);
+        Route::get('getVillages/{id}', [DependantController::class, 'getVillages']);
     });
 });
 
@@ -64,5 +70,10 @@ Route::prefix('Admin')->group(function () {
         Route::get('jemaat/edit/{id}', [JematController::class, 'edit'])->name('admin.jemat.edit');
         Route::patch('jemaat/edit/{id}', [JematController::class, 'update'])->name('admin.jemat.update');
         Route::get('jemaat/scheduleHbd', [JematController::class, 'cekHbd'])->name('admin.jemat.hbd');
+       /*  Route::get('jemaat/searchHbd', function () {
+            return view('test');
+        }); */
+        Route::get('jemaat/searchHbd', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.searchHbd');
+        Route::get('jemaat/searchHbdR', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.getSearchHbd');
     });
 });

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jemat;
+use App\Models\{Jemat,Regency};
 use Illuminate\Http\Request;
 use App\Traits\{
     HelperListTrait,
     HelperMonthTrait
 };
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class HomeController extends Controller
 {
@@ -67,9 +69,12 @@ class HomeController extends Controller
             $hub_kel = 'FA';
         }
         
+        #$provinces = Province::whereIn('id', array(31, 32, 36))->pluck('name', 'id');
+        $regencies = Regency::whereIn('id', array(3174,3171,3172,3173,3175,3275,3276,3671,3674))->orderBy('name')->pluck('name', 'id');
+        
         $pendidikan = $this->listKategori()['pendidikan'];
         $gol_dar    = $this->listKategori()['gol_dar'];
-        return view('jemat.home', compact('jemat', 'hub_kel', 'pendidikan', 'gol_dar'));
+        return view('jemat.home', compact('jemat', 'hub_kel', 'pendidikan', 'gol_dar', 'regencies'));
     }
 
     public function updateJemat(Request $request, $id)
@@ -123,6 +128,28 @@ class HomeController extends Controller
         
         return redirect()->route('jemat.upload.create');
 
+    }
+
+    public function editAlamat(Jemat $jemat)
+    {
+        $data = Jemat::FindOrFail($jemat->id);
+        $regencies = Regency::whereIn('id', array(3174,3171,3172,3173,3175,3275,3276,3671,3674))->orderBy('name')->pluck('name', 'id');
+
+        return view('jemat.edit_alamat', compact('data', 'regencies'));
+    }
+
+    public function updateAlamat(Request $request, $id)
+    {
+        $jemat = Jemat::findOrFail($id);
+        
+        try {
+            $jemat->update($request->all());
+            Alert::toast('Data Alamat Berhasil Di Update.', 'success')->width('25rem')->padding('5px');
+        } catch (ModelNotFoundException $exception) {
+            return back()->withError($exception->getMessage())->withInput();
+        }
+        
+        return redirect()->route('jemat.profile');
     }
 
     public function handleAdmin()

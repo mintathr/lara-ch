@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="#" class="brand-link">
-        <img src="{{ url('assets_admin/img/default.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="{{ url('assets_admin/img/logo_gpib.jpeg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">DB Jemaat</span>
     </a>
 
@@ -32,7 +32,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('jemat.profile') }}" class="nav-link {{ request()->is('Jemat/profile') ? 'active' : '' }}">
+                    <a href="{{ route('jemat.profile') }}" class="nav-link 
+                    {{ request()->is('Jemat/profile') ? 'active' : '' }}
+                    {{ request()->is('Jemat/profile/*') ? 'active' : '' }}
+                    ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Profile</p>
                     </a>

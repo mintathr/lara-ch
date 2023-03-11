@@ -28,8 +28,6 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ url('assets_admin/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets_admin/css/select2-bootstrap4.min.css') }}">
-    <!-- daterange picker -->
-    <!--<link rel="stylesheet" href="{{ url('assets_admin/plugins/daterangepicker/daterangepicker.css') }}">-->
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ url('assets_admin/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
@@ -95,10 +93,10 @@
         <!-- /.this is sidebar -->
         @if (Auth::user()->is_admin == 1)
             @include('admin-layout.sidebar_admin')
+        @elseif (Auth::user()->is_admin == 0)
+        @include('admin-layout.sidebar')
         @elseif (Auth::user()->is_admin == 2)
-            @include('admin-layout.sidebar_jemat')
-        @else
-            @include('admin-layout.sidebar')
+        @include('admin-layout.sidebar_jemat')
         @endif
 
         <!-- Content Wrapper. Contains page content -->
@@ -134,7 +132,7 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2023<?= (date('Y') > 2021 ? ' - ' . date('Y') : '') ?> | Komisi Inforkom Litbang GPIB Sangkakala | </strong> All rights
+            <strong>Copyright &copy; 2023<?= (date('Y') > 2023 ? ' - ' . date('Y') : '') ?> | DBSystem | </strong> All rights
             reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 1.0.0
@@ -168,9 +166,6 @@
     <script src="{{ url('assets_admin/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>-->
     <!-- jQuery Knob Chart -->
     <!--<script src="{{ url('assets_admin/plugins/jquery-knob/jquery.knob.min.js') }}"></script>-->
-    <!-- daterangepicker -->
-    <!--<script src="{{ url('assets_admin/plugins/moment/moment.min.js') }}"></script>
-    <script src="{{ url('assets_admin/plugins/daterangepicker/daterangepicker.js') }}"></script>-->
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ url('assets_admin/js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <!-- Summernote -->
@@ -186,6 +181,7 @@
     <!-- Select2 -->
     <script src="{{ url('assets_admin/js/select2.full.min.js') }}"></script>
     <!-- date-range-picker -->
+    <script src="{{ url('assets_admin/daterangepicker/moment.min.js') }}"></script>
     <script src="{{ url('assets_admin/daterangepicker/daterangepicker.js') }}"></script>
     <!-- ChartJS -->
     <!--<script src="{{ url('assets_admin/plugins/chart.js/Chart.min.js') }}"></script>-->
@@ -271,10 +267,13 @@
         });
     </script>
     <script>
-        $('.date').datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-            todayHighlight: true,
+        $(function () {
+            $('.date').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                todayHighlight: true,
+            })
+            $('#reservation').daterangepicker()
         })
     </script>
 

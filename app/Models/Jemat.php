@@ -69,4 +69,19 @@ class Jemat extends Model
     {
         return Carbon::parse($this->attributes['tgl_lahir'])->age; // calculate age
     }
+
+    public function regency()
+    {
+        return $this->belongsTo(Regency::class, 'regency_id', 'id')->withDefault();
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class, 'district_id', 'id')->withDefault();
+    }
+
+    public function village()
+    {
+        return $this->belongsTo(Village::class, 'village_id', 'id')->withDefault();
+    }
 }
