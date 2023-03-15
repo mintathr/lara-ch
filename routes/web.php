@@ -19,7 +19,7 @@ use App\Http\Controllers\sysadmin\JematController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/test', function () {
