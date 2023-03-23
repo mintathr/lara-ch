@@ -41,12 +41,12 @@ class JematController extends Controller
         $from = $this->cekMonth()['from_sunday_month'].'-'.$this->cekMonth()['from_sunday_date'];
         $to = $this->cekMonth()['to_saturday_month'].'-'.$this->cekMonth()['to_saturday_date'];
         
-        $cekHbd = Jemat::select('nama_lengkap', 'tgl_lahir')
+        $cekHbd = Jemat::select('nama_pertama', 'nama_belakang', 'tgl_lahir')
             ->whereBetween(DB::raw("(DATE_FORMAT(tgl_lahir,'%m-%d'))"), [$from,$to])
             ->orderBy('tgl_lahir', 'ASC')
             ->get();
         
-        $cekMarriage = Jemat::select('nama_lengkap', 'tgl_nikah_gereja')
+        $cekMarriage = Jemat::select('nama_pertama', 'nama_belakang', 'tgl_nikah_gereja')
             ->whereBetween(DB::raw("(DATE_FORMAT(tgl_nikah_gereja,'%m-%d'))"), [$from,$to])
             ->get();
         
@@ -85,7 +85,7 @@ class JematController extends Controller
                     'tempat_baptis'     => $request->tempat_baptis,
                     'tempat_sidi'       => $request->tempat_sidi,
                     'tgl_nikah_gereja'  => $request->tgl_nikah_gereja,
-                    'nama_lengkap'      => $request->nama_lengkap,
+                    'nama_pertama'      => $request->nama_pertama,
                     'tgl_lahir'         => $request->tgl_lahir,
                     'tgl_baptis'        => $request->tgl_baptis,
                     'tgl_sidi'          => $request->tgl_sidi,
@@ -108,12 +108,12 @@ class JematController extends Controller
             $sampai_tgl = $x[2]; 
 
       
-            $range_lahir = DB::table('jemats')->select('nama_lengkap', 'tgl_lahir', 'tgl_nikah_gereja')
+            $range_lahir = DB::table('jemats')->select('nama_pertama', 'nama_belakang', 'tgl_lahir', 'tgl_nikah_gereja')
                 ->whereBetween(DB::raw("DATE_FORMAT(tgl_lahir, '%m-%d')"), [$fromDate, $toDate])
                 ->orderByRaw('DAY(tgl_lahir)')
                 ->get();
         
-            $range_nikah = DB::table('jemats')->select('nama_lengkap', 'tgl_lahir', 'tgl_nikah_gereja')
+            $range_nikah = DB::table('jemats')->select('nama_pertama', 'nama_belakang', 'tgl_lahir', 'tgl_nikah_gereja')
                 ->WhereBetween(DB::raw("DATE_FORMAT(tgl_nikah_gereja, '%m-%d')"), [$fromDate, $toDate])
                 ->orderByRaw('DAY(tgl_nikah_gereja)')
                 ->get();

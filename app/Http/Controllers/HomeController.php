@@ -11,6 +11,7 @@ use App\Traits\{
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -177,6 +178,8 @@ class HomeController extends Controller
         $pkluFemaleUsers    = Jemat::activePklu()->where('jenis_kelamin', '=', 'P')->get();
         $pkbMaleUsers       = Jemat::activePkbPkp()->where('jenis_kelamin', '=', 'L')->get();
         $pkpFemaleUsers     = Jemat::activePkbPkp()->where('jenis_kelamin', '=', 'P')->get();
+        $pkbMaleNoMarriageUsers       = Jemat::activePkbPkpNoMarriage()->where('jenis_kelamin', '=', 'L')->get();
+        $pkpFemaleNoMarriageUsers     = Jemat::activePkbPkpNoMarriage()->where('jenis_kelamin', '=', 'P')->get();
         $gpMaleUsers        = Jemat::activeGp()->where('jenis_kelamin', '=', 'L')->get();
         $gpFemaleUsers      = Jemat::activeGp()->where('jenis_kelamin', '=', 'P')->get();
         $ptMaleUsers        = Jemat::activePt()->where('jenis_kelamin', '=', 'L')->get();
@@ -186,15 +189,17 @@ class HomeController extends Controller
 
         $sum_pkluMaleUsers      = $pkluMaleUsers->count();
         $sum_pkluFemaleUsers    = $pkluFemaleUsers->count();
-        $sum_pkbMaleUsers       = $pkbMaleUsers->count();
-        $sum_pkpFemaleUsers     = $pkpFemaleUsers->count();
+        $sum_pkbMaleUsers       = $pkbMaleUsers->count()+$pkbMaleNoMarriageUsers->count();
+        $sum_pkpFemaleUsers     = $pkpFemaleUsers->count()+$pkpFemaleNoMarriageUsers->count();
+        $sum_pkbMaleNoMarriageUsers       = $pkbMaleNoMarriageUsers->count();
+        $sum_pkpFemaleNoMarriageUsers     = $pkpFemaleNoMarriageUsers->count();
         $sum_gpMaleUsers        = $gpMaleUsers->count();
         $sum_gpFemaleUsers      = $gpFemaleUsers->count();
         $sum_ptMaleUsers        = $ptMaleUsers->count();
         $sum_ptFemaleUsers      = $ptFemaleUsers->count();
         $sum_paMaleUsers      = $paMaleUsers->count();
         $sum_paFemaleUsers      = $paFemaleUsers->count();
-        
+
         $pelkatLists = [
             ['pelkat' => 'PKLU', 'jml_laki' => $sum_pkluMaleUsers, 'jml_perempuan' => $sum_pkluFemaleUsers],
             ['pelkat' => 'PKB', 'jml_laki' => $sum_pkbMaleUsers, 'jml_perempuan' => ''],

@@ -13,7 +13,8 @@ class Jemat extends Model
     protected $fillable = [
             'kode_keluarga',
             'no_induk',
-            'nama_lengkap',
+            'nama_pertama',
+            'nama_belakang',
             'nama_keluarga',
             'jenis_kelamin',
             'hubungan_keluarga',
@@ -44,9 +45,16 @@ class Jemat extends Model
             ->WhereNotNull('tgl_nikah_gereja');     
     }
 
+    public function scopeActivePkbPkpNoMarriage($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 61')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 40')
+            ->whereNull('tgl_nikah_gereja');     
+    }
+
     public function scopeActiveGp($query)
     {
-        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 36')
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 41')
             ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 18')
             ->WhereNull('tgl_nikah_gereja');     
     }

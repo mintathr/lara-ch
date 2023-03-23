@@ -32,7 +32,7 @@
                                 @endif
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ date('d-m-Y', strtotime($hbd->tgl_lahir)) }}</td>
-                                <td>{{ $hbd->nama_lengkap }}</td>
+                                <td>{{ $hbd->nama_pertama.' '.$hbd->nama_belakang }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -63,7 +63,7 @@
                                 <tr>
                                 @endif
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->nama_lengkap }}</td>
+                                <td>{{ $row->nama_pertama.' '.$row->nama_belakang }}</td>
                                 <td>{{ $row->tgl_nikah_gereja }}</td>
                                 </tr>
                             @endforeach

@@ -74,9 +74,9 @@
               </tr>
             <tr>
                 <td colspan="2">Total</td>
-                <td style="text-align: right">{{ $sum_pkluMaleUsers+$sum_pkbMaleUsers+$sum_gpMaleUsers+$sum_ptMaleUsers }}</td>
-                <td style="text-align: right">{{ $sum_pkluFemaleUsers+$sum_pkpFemaleUsers+$sum_gpFemaleUsers+$sum_ptFemaleUsers }}</td>
-                <td style="text-align: right">{{ $sum_pkluMaleUsers+$sum_pkbMaleUsers+$sum_gpMaleUsers+$sum_ptMaleUsers+$sum_pkluFemaleUsers+$sum_pkpFemaleUsers+$sum_gpFemaleUsers+$sum_ptFemaleUsers }}</td>
+                <td style="text-align: right">{{ $sum_pkluMaleUsers+$sum_pkbMaleUsers+$sum_gpMaleUsers+$sum_ptMaleUsers+$sum_paMaleUsers }}</td>
+                <td style="text-align: right">{{ $sum_pkluFemaleUsers+$sum_pkpFemaleUsers+$sum_gpFemaleUsers+$sum_ptFemaleUsers+$sum_paFemaleUsers }}</td>
+                <td style="text-align: right">{{ $sum_pkluMaleUsers+$sum_pkbMaleUsers+$sum_gpMaleUsers+$sum_ptMaleUsers+$sum_paMaleUsers+$sum_pkluFemaleUsers+$sum_pkpFemaleUsers+$sum_gpFemaleUsers+$sum_ptFemaleUsers+$sum_paFemaleUsers }}</td>
             </tr>
           </tbody>
         </table>

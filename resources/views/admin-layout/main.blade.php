@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/favicon_23042013_104032.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/afavicon_23042013_104032.ico') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_admin/img/favicon_23042013_104032.ico') }}">
     
     <!-- Font Awesome -->

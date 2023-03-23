@@ -7,8 +7,8 @@
     <title>DB System | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/favicon_23042013_104032.ico') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_admin/img/favicon_23042013_104032.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/favicon1_23042013_104032.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_admin/img/favicon1_23042013_104032.ico') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ url('assets_admin/css/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->

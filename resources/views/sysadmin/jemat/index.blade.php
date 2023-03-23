@@ -33,7 +33,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $jemat->no_induk }}</td>
-                        <td>{{ $jemat->nama_lengkap }}</td>
+                        <td>{{ $jemat->nama_pertama.' '.$jemat->nama_belakang }}</td>
                         <td>{{ $jemat->nama_keluarga }}</td>
                         {{-- <td>{{ $jemat->status_pelkat }}</td> --}}
                         <td>{{ $jemat->tgl_lahir }}</td>
