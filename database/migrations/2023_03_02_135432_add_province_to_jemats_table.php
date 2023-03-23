@@ -20,6 +20,7 @@ class AddProvinceToJematsTable extends Migration
             $table->char('district_id', 7)->after('regency_id');
             $table->char('village_id', 10)->after('district_id');
             $table->string('alamat')->after('village_id');
+            $table->string('alamat_saat_ini')->after('alamat');
         });
     }
 

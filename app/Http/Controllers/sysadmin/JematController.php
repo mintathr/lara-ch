@@ -65,12 +65,12 @@ class JematController extends Controller
     {
         $decrypted = Crypt::decryptString($id);
         $jemat = Jemat::findOrFail($decrypted);
-        $statusAktif    = $this->listKategori()['statusAktif'];
+        #$statusAktif    = $this->listKategori()['statusAktif'];
 
         return view('sysadmin.jemat.edit', [
             'jemat'     => $jemat,
             'id'        => $id,
-            'statusAktif'        => $statusAktif
+         #   'statusAktif'        => $statusAktif
         ]);
     }
 

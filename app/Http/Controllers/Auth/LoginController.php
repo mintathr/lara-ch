@@ -47,7 +47,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $inputVal = $request->all();
-        if($inputVal['email'] == 'admin@gmail.com'){
+        if($inputVal['email'] == 'sekretariat@gmail.com'){
             $b = $inputVal['email'];
         }else{
             $a = '08.01-01-';//0001-01

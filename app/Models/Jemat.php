@@ -15,6 +15,7 @@ class Jemat extends Model
             'no_induk',
             'nama_pertama',
             'nama_belakang',
+            'nama_lengkap',
             'nama_keluarga',
             'jenis_kelamin',
             'hubungan_keluarga',
@@ -30,6 +31,12 @@ class Jemat extends Model
             'pendidikan_terakhir',
             'status_pelkat',
             'sektor',
+            'province_id',
+            'regency_id',
+            'district_id',
+            'village_id',
+            'alamat',
+            'alamat_saat_ini',
             'keterangan',
     ];
 

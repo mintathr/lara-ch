@@ -17,6 +17,8 @@ class CreateJematsTable extends Migration
             $table->id();
             $table->integer('kode_keluarga', false, true)->nullable()->length(4)->zerofill();
             $table->string('no_induk', 20)->unique();
+            $table->string('nama_pertama');
+            $table->string('nama_balakang');
             $table->string('nama_lengkap');
             $table->string('nama_keluarga');
             $table->enum('jenis_kelamin', ['L', 'P']);
