@@ -10,8 +10,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/afavicon_23042013_104032.ico') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_admin/img/favicon_23042013_104032.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_admin/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_admin/img/favicon.ico') }}">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ url('assets_admin/css/fontawesome-free/css/all.min.css') }}">
@@ -94,9 +94,11 @@
         @if (Auth::user()->is_admin == 1)
             @include('admin-layout.sidebar_admin')
         @elseif (Auth::user()->is_admin == 0)
-        @include('admin-layout.sidebar')
+            @include('admin-layout.sidebar')
         @elseif (Auth::user()->is_admin == 2)
-        @include('admin-layout.sidebar_jemat')
+            @include('admin-layout.sidebar_jemat')
+        @elseif (Auth::user()->is_admin == 4)
+            @include('admin-layout.sidebar_pt')
         @endif
 
         <!-- Content Wrapper. Contains page content -->

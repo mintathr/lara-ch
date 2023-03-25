@@ -57,10 +57,38 @@ trait HelperListTrait
             ['dow' => 'FA', 'desc' => 'Family Lain'],
         ];
 
+        $statusAktif = [
+            'Aktif',
+            'Tidak Aktif',
+            'Pindah',
+            'Meninggal'
+        ];
+
+        $pelayanPt = [
+            ['nik_pelayan'  => '08.01-02-0119-01', 'nama_pelayan'   => 'Kak Aldo'],
+            ['nik_pelayan'  => '08.01-01-0001-02', 'nama_pelayan'   => 'Kak Heidi'],
+            ['nik_pelayan'  => '08.01-02-0084-02', 'nama_pelayan'   => 'Kak Janis'],
+            ['nik_pelayan'  => '08.01-01-0052-32', 'nama_pelayan'   => 'Kak Maria'],
+            ['nik_pelayan'  => '08.01-01-0044-02', 'nama_pelayan'   => 'Kak Rini'],
+            ['nik_pelayan'  => '08.01-01-0034-31', 'nama_pelayan'   => 'Kak Taro'],
+            ['nik_pelayan'  => '08.01-01-0026-02', 'nama_pelayan'   => 'Kak Uli'],
+            ['nik_pelayan'  => '08.01-01-0035-31', 'nama_pelayan'   => 'Kak Putri'],
+        ];
+
+        $pengurusPt = [
+            ['nik_pengurus'  => '08.01-02-0119-01', 'nama_pengurus'   => 'Kak Aldo'],
+            ['nik_pengurus'  => '08.01-02-0110-32', 'nama_pengurus'   => 'Kak Cokhie'],
+            ['nik_pengurus'  => '08.01-02-0133-01', 'nama_pengurus'   => 'Kak Angga'],
+
+        ];
+
         return [
             'pendidikan'    => $pendidikan,
             'gol_dar'       => $gol_dar,
-            'hubKel'        => $hubKel
+            'hubKel'        => $hubKel,
+            'statusAktif'   => $statusAktif,
+            'pelayanPt'     => $pelayanPt,
+            'pengurusPt'     => $pengurusPt
         ];
     }
 }

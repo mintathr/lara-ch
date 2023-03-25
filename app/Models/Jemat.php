@@ -73,6 +73,20 @@ class Jemat extends Model
             ->WhereNull('tgl_nikah_gereja');     
     }
 
+    public function scopeActivePtDwi($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 19')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 13')
+            ->WhereNull('tgl_nikah_gereja');     
+    }
+
+    public function scopeActivePtEka($query)
+    {
+        return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 14')
+            ->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) > 10')
+            ->WhereNull('tgl_nikah_gereja');     
+    }
+
     public function scopeActivePa($query)
     {
         return $query->whereRaw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) < 11')

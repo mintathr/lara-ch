@@ -62,6 +62,7 @@
                 <h1 class="mb-5">DBsystem</h1>
                 @csrf
                 <div>
+                    <input type="hidden" name="helper" value="08.01-01-">
                     <input type="text" name="email" class="form-control" placeholder="Nomor Jemaat" value="{{ old('email') }}">
                 </div>
                 <input type="hidden" name="password" value="semangat" class="form-control upass" placeholder="Password"> 

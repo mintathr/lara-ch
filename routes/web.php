@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DependantController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
+use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 use App\Http\Controllers\sysadmin\JematController;
 
 /*
@@ -54,6 +55,7 @@ Route::prefix('Jemat')->group(function () {
         Route::post('upload', [UploadController::class, 'store'])->name('jemat.upload.store');
         Route::delete('upload', [UploadController::class, 'delete'])->name('jemat.upload.delete');
         Route::get('profile', [ProfileController::class, 'index'])->name('jemat.profile');
+        Route::post('profile/uploadPhoto', [ProfileController::class, 'updatePhoto'])->name('jemat.update.photo'); 
         Route::get('profile/download/{temporaryfile}', [ProfileController::class, 'getDownload']);
         Route::get('profile/{jemat:nama_keluarga}', [HomeController::class, 'editAlamat']); 
         Route::patch('profile/{id}', [HomeController::class, 'updateAlamat'])->name('jemat.update.alamat');
@@ -62,6 +64,17 @@ Route::prefix('Jemat')->group(function () {
         Route::get('getVillages/{id}', [DependantController::class, 'getVillages']);
     });
 });
+
+########## PT TERUNA ##########
+Route::prefix('PT')->group(function () {
+    Route::group(['middleware' => 'is.teruna'], function () {
+        Route::get('home', [PtHomeController::class, 'index'])->name('pt.route');
+        #Route::get('absensi', [PtHomeController::class, 'index'])->name('pt.route');
+        Route::get('teruna', [PtJematController::class, 'teruna'])->name('pt.teruna');
+        Route::get('pengurus-pelayan', [PtJematController::class, 'pelayanPengurusTeruna'])->name('pt.pengurus');
+        #Route::post('pengurus-pelayan', [PtJematController::class, 'pelayan'])->name('pt.pengurus.post');
+    });
+});  
 
 Route::prefix('Admin')->group(function () {
     Route::group(['middleware' => 'is.admin'], function () {

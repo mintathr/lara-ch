@@ -24,7 +24,8 @@ class User extends Authenticatable
         'is_admin',
         'role',
         'block',
-        'last_change'
+        'last_change',
+        'photo_profile'
     ];
 
     /**

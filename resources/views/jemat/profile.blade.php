@@ -19,12 +19,12 @@
             <div class="card card-primary card-outline">
                 <div class="card-body box-profile">
                     <div class="text-center">
-                        @if($jemat->jenis_kelamin == 'P')
-                        <img class="profile-user-img img-fluid img-circle"
-                            src="{{ url('assets_admin/img/avatar_ladies.png') }}" alt="User profile picture">
+                        @if(Auth::user()->photo_profile == 'default1.png')
+                            <img class="profile-user-img img-fluid img-circle"
+                            src="{{ url('assets_admin/img/default1.png') }}" alt="User profile picture">
                         @else
-                        <img class="profile-user-img img-fluid img-circle"
-                            src="{{ url('assets_admin/img/avatar_man.png') }}" alt="User profile picture">
+                            <img class="profile-user-img img-fluid img-circle"
+                            src="{{ url('storage/photo_profile/'.Auth::user()->photo_profile) }}" alt="User profile picture">
                         @endif
                     </div>
 
@@ -43,7 +43,18 @@
                             <b>Sektor</b> <a class="float-right">{{ $jemat->sektor }}</a>
                         </li>
                     </ul>
-
+                    <form name="myform" method="post" action="{{ route('jemat.update.photo') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group input-group-sm">
+                            <div class="custom-file">
+                                <input type="file" name="photo_profile" class="custom-file-input" aria-describedby="inputGroup-sizing-sm" id="exampleInputFile">
+                                <label class="custom-file-label form-control-sm" for="exampleInputFile">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text" onclick="myform.submit()" id="">Upload</span>
+                            </div>
+                        </div>
+                    </form>
                     {{-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> --}}
                 </div>
             </div>
@@ -114,7 +125,7 @@
                                 <th>Nama</th>
                                 <th>Hubungan Keluarga</th>
                                 <th>Tanggal Lahir</th>
-                                <th>Pelkat</th>
+                                <!-- <th>Pelkat</th> -->
                                 <th>#</th>
                             </tr>
                         </thead>
@@ -125,7 +136,7 @@
                                 <td>{{ $list->nama_lengkap }}</td>
                                 <td>{{ $list->hubungan_keluarga }}</td>
                                 <td>{{ $list->tgl_lahir }}</td>
-                                <td>{{ $list->status_pelkat }}</td>
+                                <!-- <td>{{ $list->status_pelkat }}</td> -->
                                 <td>
                                     <a href="#" class="btn btn-primary">view</a>
                                 </td>

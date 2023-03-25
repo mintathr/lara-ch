@@ -41,7 +41,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label>Nama</label>
-                                        <input type="text" name="nama_lengkap" class="form-control @error('nama_lengkap') is-invalid @enderror" id="" placeholder="Nama Lengkap" value="{{ old('nama_lengkap') ?? $jemat->nama_lengkap ?? '' }}">
+                                        <input type="text" name="nama_lengkap" disabled class="form-control @error('nama_lengkap') is-invalid @enderror" id="" placeholder="Nama Lengkap" value="{{ old('nama_lengkap') ?? $jemat->nama_lengkap ?? '' }}">
                                         @error('nama_lengkap')
                                             <div class="invalid-feedback">
                                                 {{ $message }}

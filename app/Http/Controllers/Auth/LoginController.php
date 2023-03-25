@@ -47,11 +47,11 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $inputVal = $request->all();
-        if($inputVal['email'] == 'sekretariat@gmail.com'){
-            $b = $inputVal['email'];
-        }else{
+        if(!empty($inputVal['helper'])){
             $a = '08.01-01-';//0001-01
             $b = $a.$inputVal['email'];
+        }else{
+            $b = $inputVal['email'];
         }
 
         $this->validate($request, [
@@ -114,6 +114,20 @@ class LoginController extends Controller
                 if ($selisih_hari <= 90) {
                     Alert::toast('Login Berhasil', 'success')->width('25rem')->padding('5px');
                     return redirect()->route('jemat.route');
+                } else {
+                    return redirect()->route('changePasswordExp');
+                }
+            } elseif (auth()->user()->is_admin == 4 and auth()->user()->block <= 2) {
+                User::where('email', $b)->update([
+                    'block' => 0,
+                ]);
+                if ($inputVal['password'] == "P@ssw0rd") {
+                    return redirect()->route('changePasswordExp');
+                }
+
+                if ($selisih_hari <= 90) {
+                    Alert::toast('Login Berhasil', 'success')->width('25rem')->padding('5px');
+                    return redirect()->route('pt.route');
                 } else {
                     return redirect()->route('changePasswordExp');
                 }
