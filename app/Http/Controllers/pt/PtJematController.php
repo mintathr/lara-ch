@@ -43,8 +43,8 @@ class PtJematController extends Controller
             $this->listKategori()['pelayanPt'][6]['nik_pelayan'],
             $this->listKategori()['pelayanPt'][7]['nik_pelayan'],
             ])->get();
-        $pengurusPt = Jemat::where('pengurus_pt', '=', 'y')->get();
-        $pelayanPt  = Jemat::where('pelayan_pt', '=', 'y')->get();
+        $pengurusPt = Jemat::where('pengurus_pt', '=', 'y')->orderBy('nama_pertama', 'asc')->get();
+        $pelayanPt  = Jemat::where('pelayan_pt', '=', 'y')->orderBy('nama_pertama', 'asc')->get();
         return view('pt.jemat.pelayan_pengurus', [
             #'jemats'         => $jemats,
             'pengurusPt'    => $pengurusPt,

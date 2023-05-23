@@ -60,7 +60,35 @@
                     </ul>
                 </li>
                 
-                
+                <li class="nav-header">LAMPIRAN-LAMPIRAN</li>
+                <li class="nav-item has-treeview 
+                {{ request()->is('Admin/lampiran') ? 'menu-open' : '' }}
+                {{ request()->is('Admin/lampiran/*') ? 'menu-open' : '' }}
+                ">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-file-prescription"></i>
+                        <p>
+                            Lampiran
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.lampiran.upload.create') }}" class="nav-link 
+                            {{ request()->is('Admin/lampiran/upload') ? 'active' : '' }}
+                            ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Upload</p>
+                            </a>
+                            <a href="{{ route('admin.lampiran') }}" class="nav-link 
+                            {{ request()->is('Admin/lampiran') ? 'active' : '' }}
+                            ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tabel</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 
                 
                 <li class="nav-header">PROFILE</li>

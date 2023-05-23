@@ -5,8 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DependantController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
-use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 use App\Http\Controllers\sysadmin\JematController;
+use App\Http\Controllers\sysadmin\DocumentController;
+use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 
 /*
 |--------------------------------------------------------------------------
@@ -89,5 +90,12 @@ Route::prefix('Admin')->group(function () {
         }); */
         Route::get('jemaat/searchHbd', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.searchHbd');
         Route::get('jemaat/searchHbdR', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.getSearchHbd');
+    
+    // LAMPIRAN - LAMPIRAN
+    Route::get('lampiran', [DocumentController::class, 'index'])->name('admin.lampiran');
+    Route::get('lampiran/upload', [DocumentController::class, 'create'])->name('admin.lampiran.upload.create');
+    Route::post('lampiran/upload', [DocumentController::class, 'store'])->name('admin.lampiran.upload.store');
+    Route::delete('lampiran/upload', [DocumentController::class, 'delete'])->name('admin.lampiran.upload.delete');
+    Route::get('lampiran/download/{temporaryfile}', [DocumentController::class, 'getDownload']);
     });
 });

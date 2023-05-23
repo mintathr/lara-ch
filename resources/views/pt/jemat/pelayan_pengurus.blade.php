@@ -1,6 +1,6 @@
 @extends('admin-layout.main')
-@section('title', 'Home')
-@section('subtitle', 'Home')
+@section('title', 'Pelayan Pengurus PT')
+@section('subtitle', 'Pelayan & Pengurus PT')
 
 @section('content')
 {{-- <form role="form" method="POST" action="{{ route('pt.pengurus.post') }}">
@@ -9,11 +9,42 @@
 <input type="text" name="nama_lengkap[]" value="{{ \Str::slug($jemat->nama_lengkap) }}">
 
 @endforeach
-<button type="submit" class="btn btn-info">Update</button> --}}
+<button type="submit" class="btn btn-info">Update</button> 
 
-</button>
+</button> --}}
+<h3>Pelayan PT</h3>
 <div class="row">
-    <div class="col-lg-6 col-6">
+    @foreach($pelayanPt as $jemat)
+    <div class="col-lg-3 col-6">
+        <div class="card">
+        <img src="{{ url('assets_admin/img/avatar_man.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ $jemat['nama_pertama']. ' ' .$jemat['nama_belakang'] }}</h5>
+            <p class="card-text">{{ $jemat['handphone'] }}</p>
+        </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
+<h3>Pengurus PT</h3>
+<div class="row">
+    @foreach($pengurusPt as $jemat)
+    <div class="col-lg-3 col-6">
+        <div class="card">
+        <img src="{{ url('assets_admin/img/avatar_man.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ $jemat['nama_pertama']. ' ' .$jemat['nama_belakang'] }}</h5>
+            <p class="card-text">{{ $jemat['handphone'] }}</p>
+        </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
+
+<!-- <div class="row">
+    <div class="col-lg-6 col-12">
         <div class="card card-outline card-primary">
             <div class="card-header">
                 <h3 class="card-title">Tabel Data </h3>
@@ -42,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6 col-6">
+    <div class="col-lg-6 col-12">
         <div class="card card-outline card-danger">
             <div class="card-header">
                 <h3 class="card-title">Tabel Data </h3>
@@ -71,5 +102,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
