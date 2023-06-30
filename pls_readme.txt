@@ -1,3 +1,8 @@
+git push dari local,
+push with https => git push origin
+push with ssh => git push github
+cek remote git remote -v
+
 composer diagnose -vvv
 
 https://medium.com/@dennissmink/laravel-create-auth-lock-screen-11d6014fb8a1
