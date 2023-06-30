@@ -25,6 +25,36 @@
                     </a>
                 </li>
 
+                <li class="nav-header">Absensi Pelkat</li>
+                <li class="nav-item has-treeview 
+                {{ request()->is('Admin/absensi/*') ? 'menu-open' : '' }}
+                ">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-map-pin"></i>
+                        <p>
+                            Pelkat
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('absence.search.pa') }}" class="nav-link 
+                            {{ request()->is('Admin/absensi/pa') ? 'active' : '' }}
+                            ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>PA</p>
+                            </a>
+                            <a href="{{ route('absence.search.pt') }}" class="nav-link 
+                            {{ request()->is('Admin/absensi/pt') ? 'active' : '' }}
+                            ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>PT</p>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                </li>
+                
                 <li class="nav-header">Jemaat</li>
                 <li class="nav-item has-treeview 
                 {{ request()->is('Admin/jemaat') ? 'menu-open' : '' }}

@@ -5,9 +5,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DependantController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
+use App\Http\Controllers\PelkatAbsenceController;
 use App\Http\Controllers\sysadmin\JematController;
 use App\Http\Controllers\sysadmin\DocumentController;
 use App\Http\Controllers\pt\{PtHomeController, PtJematController};
+use App\Http\Controllers\skklweb\WebSkklController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,13 @@ use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 | contains the "web" middleware group. Now create something great!
 |
 */
+// webskkl
+Route::get('website', [WebSkklController::class, 'index'])->name('webskkl');
+Route::get('diaken', [WebSkklController::class, 'diaken'])->name('webskkl.diaken');
+Route::get('majelis', [WebSkklController::class, 'majelis'])->name('webskkl.majelis');
+Route::get('komisi-il', [WebSkklController::class, 'komisiIl'])->name('webskkl.komisi.il');
+Route::get('pelkat-pt', [WebSkklController::class, 'pelkatPt'])->name('webskkl.pelkat.pt');
+
 
 Route::get('/', function () {
     return view('auth.login');
@@ -40,6 +49,11 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// absence
+Route::get('absensi-pt', [PelkatAbsenceController::class, 'absensiPt'])->name('absence.pt');
+Route::get('absensi-pa', [PelkatAbsenceController::class, 'absensiPa'])->name('absence.pa');
+Route::post('absensi', [PelkatAbsenceController::class, 'store'])->name('absence.pelkat');
 
 Route::get('changePassword', [ChangePasswordController::class, 'index'])->name('changePassword');
 Route::post('changePassword', [ChangePasswordController::class, 'changePassword']);
@@ -98,4 +112,9 @@ Route::prefix('Admin')->group(function () {
     Route::delete('lampiran/upload', [DocumentController::class, 'delete'])->name('admin.lampiran.upload.delete');
     Route::get('lampiran/download/{temporaryfile}', [DocumentController::class, 'getDownload']);
     });
+
+    // absensi
+    Route::get('absensi/pa', [PelkatAbsenceController::class, 'searchAbsencePa'])->name('absence.search.pa');
+    Route::get('absensi/pt', [PelkatAbsenceController::class, 'searchAbsencePt'])->name('absence.search.pt');
+
 });
