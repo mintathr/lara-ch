@@ -53,7 +53,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-church me-3"></i>SKKL</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-church me-3"></i>GPIB SANGKAKALA</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -94,7 +94,7 @@
                     <a class="nav-link dropdown-toggle {{ request()->is('diaken') ? 'active' : '' }} {{ request()->is('majelis') ? 'active' : '' }}" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Presbiter</a>
                     <ul class="dropdown-menu fade-down m-0 dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{ route('webskkl.diaken') }}">Diaken</a></li>
-                        <li><a class="dropdown-item" href="{{ route('webskkl.majelis') }}">Majelis</a></li>
+                        <li><a class="dropdown-item" href="{{ route('webskkl.majelis') }}">Penatua</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -124,7 +124,7 @@
                     </ul>
                 </li>
             </ul>
-                <a href="https://jemaat.gpibskkl.com" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
             
         </div>
     </nav>

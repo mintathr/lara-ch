@@ -7,9 +7,10 @@ use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
 use App\Http\Controllers\PelkatAbsenceController;
 use App\Http\Controllers\sysadmin\JematController;
-use App\Http\Controllers\sysadmin\DocumentController;
-use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 use App\Http\Controllers\skklweb\WebSkklController;
+use App\Http\Controllers\sysadmin\DocumentController;
+use App\Http\Controllers\ppmj\PpmjDocumentationController;
+use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::get('majelis', [WebSkklController::class, 'majelis'])->name('webskkl.maje
 Route::get('komisi-il', [WebSkklController::class, 'komisiIl'])->name('webskkl.komisi.il');
 Route::get('pelkat-pt', [WebSkklController::class, 'pelkatPt'])->name('webskkl.pelkat.pt');
 
+Route::get('ppmj', [PpmjDocumentationController::class, 'index'])->name('ppmj');
+Route::get('ppmj/edit/{id}', [PpmjDocumentationController::class, 'edit'])->name('ppmj.edit');
 
 Route::get('/', function () {
     return view('auth.login');
