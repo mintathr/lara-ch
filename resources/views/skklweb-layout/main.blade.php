@@ -91,10 +91,10 @@
                 </li> -->
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->is('diaken') ? 'active' : '' }} {{ request()->is('majelis') ? 'active' : '' }}" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Presbiter</a>
+                    <a class="nav-link dropdown-toggle {{ request()->is('diaken') ? 'active' : '' }} {{ request()->is('penatua') ? 'active' : '' }}" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Presbiter</a>
                     <ul class="dropdown-menu fade-down m-0 dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{ route('webskkl.diaken') }}">Diaken</a></li>
-                        <li><a class="dropdown-item" href="{{ route('webskkl.majelis') }}">Penatua</a></li>
+                        <li><a class="dropdown-item" href="{{ route('webskkl.penatua') }}">Penatua</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -150,12 +150,13 @@
                 <div class="col-lg-8 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Teratai Ujung No. 155 A, Komplek Kodam Kebon Jeruk Jakarta Barat 11530</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>021 549xx</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>021 5491545</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>sekretariat@gpibskkl.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>gpib.skkl@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@gpibsangkakala" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>

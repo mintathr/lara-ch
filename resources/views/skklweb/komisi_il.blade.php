@@ -28,13 +28,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6282231675774" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Vega</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Dkn. Vega Moto</h5>
+                            <small>Ketua</small>
                         </div>
                     </div>
                 </div>
@@ -46,13 +46,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281288897457" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">Robert Tampubolon</h5>
-                            <small>Designation</small>
+                            <small>Anggota</small>
                         </div>
                     </div>
                 </div>
@@ -64,13 +64,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6283813552087" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">Jerry</h5>
-                            <small>Designation</small>
+                            <small>Anggota</small>
                         </div>
                     </div>
                 </div>
@@ -82,13 +82,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6285156194815" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
                             <h5 class="mb-0">Angga</h5>
-                            <small>Designation</small>
+                            <small>Anggota</small>
                         </div>
                     </div>
                 </div>

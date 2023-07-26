@@ -16,8 +16,7 @@
                                 </h5>
                                 <h1 class="display-3 text-white animated slideInDown">GPIB Sangkakala
                                 </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                                    stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus
+                                <p class="fs-5 text-white mb-4 pb-2">Memberdayakan Warga Gereja Secara Intergenerasional Guna Merawat Jejaring Sosial & Ekologis di Konteks Budaya Digital.
                                     eirmod elitr.</p>
                                 <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
@@ -151,7 +150,7 @@
                     <div class="position-relative h-100">
                         <!-- <div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.6s"> -->
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/UdW6M76Fi68" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/2dpwVg4poXg" allowfullscreen></iframe>
                         </div>
                         <!-- </div> -->
                         <!-- <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;"> -->
@@ -160,10 +159,8 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Live Stream</h6>
                     <h1 class="mb-4">Ibadah Hari Minggu</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.</p>
+                    <p class="mb-4">Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
                     </p>
                     <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
@@ -343,7 +340,7 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
+                            <h5 class="mb-0"> Name</h5>
                             <small>KMJ</small>
                         </div>
                     </div>
@@ -356,13 +353,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6282197144896" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Sekretaris I</small>
+                            <h5 class="mb-0">Pnt. Flora V. Pattynama</h5>
+                            <small>Sekretaris</small>
                         </div>
                     </div>
                 </div>
@@ -374,13 +371,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/62817775328" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Sekretaris II</small>
+                            <h5 class="mb-0">Dkn. Sri Ninta Sembiring</h5>
+                            <small>Sekretaris I</small>
                         </div>
                     </div>
                 </div>
@@ -392,12 +389,12 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/628126033399" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
+                            <h5 class="mb-0">Pnt. Betty H. Hassim</h5>
                             <small>Ketua I</small>
                         </div>
                     </div>
@@ -410,13 +407,13 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281546233021" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>KMJ</small>
+                            <h5 class="mb-0">Pnt. Sarwoto</h5>
+                            <small>Ketua II</small>
                         </div>
                     </div>
                 </div>
@@ -428,52 +425,35 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281514342393" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Sekretaris I</small>
+                            <h5 class="mb-0">Dkn. Anja D. Sembiring</h5>
+                            <small>Ketua III</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6285319633307" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Sekretaris II</small>
+                            <h5 class="mb-0">Dkn. Delima S. H. Tengker</h5>
+                            <small>Bendahara</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Ketua I</small>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -483,7 +463,7 @@
     <div class="container-xxl section-padding" id="section_6">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">PELKATA</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">PELKAT</h6>
                 <h1 class="mb-5">Pelayanan Kategorial</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">

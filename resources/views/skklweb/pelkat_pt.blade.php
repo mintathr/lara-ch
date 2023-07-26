@@ -45,8 +45,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <!-- <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-warning mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -63,8 +63,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-warning mx-1" href="https://wa.me/6281808928940" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -81,8 +81,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-warning mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-warning mx-1" href="https://wa.me/6285156194815" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -111,8 +111,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281386100733" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -129,8 +129,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -147,8 +147,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -165,8 +165,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -183,8 +183,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -201,8 +201,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -219,8 +219,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -237,8 +237,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -255,8 +255,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -273,8 +273,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
@@ -291,8 +291,8 @@
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">

@@ -37,11 +37,11 @@ class WebSkklController extends Controller
         ]);
     }
 
-    public function majelis()
+    public function penatua()
     {
         $presbiters     = Presbiters::activemajelis()->get();
 
-        return view('skklweb.majelis', [
+        return view('skklweb.penatua', [
             'presbiters'    => $presbiters,
         ]);
     }

@@ -25,7 +25,7 @@ use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 // webskkl
 Route::get('website', [WebSkklController::class, 'index'])->name('webskkl');
 Route::get('diaken', [WebSkklController::class, 'diaken'])->name('webskkl.diaken');
-Route::get('majelis', [WebSkklController::class, 'majelis'])->name('webskkl.majelis');
+Route::get('penatua', [WebSkklController::class, 'penatua'])->name('webskkl.penatua');
 Route::get('komisi-il', [WebSkklController::class, 'komisiIl'])->name('webskkl.komisi.il');
 Route::get('pelkat-pt', [WebSkklController::class, 'pelkatPt'])->name('webskkl.pelkat.pt');
 
