@@ -159,8 +159,12 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Live Stream</h6>
                     <h1 class="mb-4">Ibadah Hari Minggu</h1>
-                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.</p>
-                    <p class="mb-4">Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
+                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.
+                    Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
+                    </p>
+                    <p class="mb-4">
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export="><i class="fa fa-file-pdf"></i> warta jemaat</a>
+                        <a class="btn btn-primary mx-1" href=""><i class="fa fa-file-pdf"></i> tata ibadah</a>
                     </p>
                     <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">

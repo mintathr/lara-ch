@@ -124,7 +124,7 @@
                     </ul>
                 </li>
             </ul>
-                <a href="/" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
             
         </div>
     </nav>
@@ -157,7 +157,7 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@gpibsangkakala" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/harapan.selaluada"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
               

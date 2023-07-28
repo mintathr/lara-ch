@@ -81,8 +81,8 @@ class HomeController extends Controller
     public function updateJemat(Request $request, $id)
     {
         $messages = [
-            'nama_lengkap.required'             => 'Nama Harus Diisi!',
-            'nama_lengkap.regex'                => 'Format Salah',
+            #'nama_lengkap.required'             => 'Nama Harus Diisi!',
+            #'nama_lengkap.regex'                => 'Format Salah',
             'tempat_lahir.required'             => 'Tempat Lahir Harus Diisi!',
             'tempat_lahir.regex'                => 'Format Salah',
             'tgl_lahir.required'                => 'Tanggal Lahir Harus Diisi!',
@@ -95,13 +95,13 @@ class HomeController extends Controller
             #'tgl_nikah_gereja.required'         => 'Tanggal Nikah Gereja Harus Diisi!',
             #'tgl_nikah_sipil.required'          => 'Tanggal Nikah Sipil Harus Diisi!',
             'pendidikan_terakhir.required'      => 'Pendidikan Terakhir Harus Diisi!',
-            'golongan_darah.required'           => 'Golongan Darah Harus Diisi!',
+            #'golongan_darah.required'           => 'Golongan Darah Harus Diisi!',
             'jenis_kelamin.required'            => 'Jenis Kelamin Harus Diisi!',
             'sektor.required'                   => 'Sektor Harus Diisi!',
         ];
 
         $request->validate([
-            'nama_lengkap'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
+            #'nama_lengkap'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
             'tempat_lahir'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
             'tgl_lahir'         => 'required',
             'tempat_baptis'     => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
@@ -110,8 +110,8 @@ class HomeController extends Controller
             #'tgl_sidi'          => 'required',
             #'tgl_nikah_gereja'  => 'required',
             #'tgl_nikah_sipil'   => 'required',
-            'pendidikan_terakhir' => 'required',
-            'golongan_darah'    => 'required',
+            #'pendidikan_terakhir' => 'required',
+            #'golongan_darah'    => 'required',
             'jenis_kelamin'     => 'required',
             'sektor'            => 'required',
 
