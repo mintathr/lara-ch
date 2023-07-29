@@ -155,7 +155,7 @@
                                         <option value="" disabled selected>== Pilih Pendidikan Terakhir ==</option>
                                         <option value="0">Belum/ Tidak Sekolah</option>
                                         @foreach ($pendidikan as $item)
-                                            <option value="{{ $loop->iteration }}" {{ ($jemat->pendidikan_terakhir === $item) ? 'selected' : '' }}>{{ $item }}</option>
+                                            <option value="{{ $item }}" {{ ($jemat->pendidikan_terakhir === $item) ? 'selected' : '' }}>{{ $item }}</option>
                                         @endforeach
                                     </select>
                                     @error('pendidikan_terakhir')
