@@ -134,22 +134,28 @@ class LoginController extends Controller
                 }
             }
         } else {
-            if($cek_block = User::where([
-                ['email', '=', $b]
-            ])->first()){
-            $awal_block = $cek_block['block'];
+            if(!empty($request->helper)){
 
-            if ($awal_block >= 3) {
-                Auth::logout();
+                if($cek_block = User::where([
+                    ['email', '=', $b]
+                ])->first()){
+                    $awal_block = $cek_block['block'];
+
+                    if ($awal_block >= 3) {
+                        Auth::logout();
+                        return redirect()->route('login')
+                            ->with('error', 'Email Terblokir!.');
+                    }
+
+                    User::where('email', $b)
+                        ->update(['block' => $awal_block + 1]);
+                }
+                return redirect()->route('loginUser')
+                    ->with('error', 'Email & Password Salah!.');
+            }else{
                 return redirect()->route('login')
-                    ->with('error', 'Email Terblokir!.');
+                    ->with('error', 'Email & Password Salah!.');
             }
-
-            User::where('email', $b)
-                ->update(['block' => $awal_block + 1]);
-        }
-            return redirect()->route('login')
-                ->with('error', 'Email & Password Salah!.');
         }
     }
 }
