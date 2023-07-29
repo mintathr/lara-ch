@@ -47,8 +47,9 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $inputVal = $request->all();
+      
         if(!empty($inputVal['helper'])){
-            $a = '08.01-01-';//0001-01
+            $a = '08.01-';//01-0001-01
             $b = $a.$inputVal['email'];
         }else{
             $b = $inputVal['email'];
