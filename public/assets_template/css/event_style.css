@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------------- 
+ * ## events list
+ * ------------------------------------------------------------------- */
+ .events-list .column:nth-child(2n+1) {
+    padding-right: 2.4vw;
+  }
+  
+  .events-list .column:nth-child(2n+2) {
+    padding-left: 2.4vw;
+  }
+  
+  .events-list__item {
+    margin-bottom: 4rem;
+  }
+  
+  .events-list__item-title a {
+    color: #000000;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .events-list__item-title a:hover,
+  .events-list__item-title a:focus {
+    color: #3b0d11;
+    border-bottom: 1px solid #3b0d11;
+  }
+  
+  .events-list__meta {
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.667;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: #000000;
+    margin-left: 0;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .events-list__meta li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-left: 4.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  .events-list__meta li::before {
+    content: "";
+    display: block;
+    height: 1.4rem;
+    width: 1.4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    top: 1.8rem;
+    left: .8rem;
+  }
+  
+  .events-list__meta .events-list__meta-date::before {
+    background-image: url(../../assets_template/img/icon-calendar.svg);
+  }
+  
+  .events-list__meta .events-list__meta-time::before {
+    background-image: url(../../assets_template/img/icon-time.svg);
+  }
+  
+  .events-list__meta .events-list__meta-location::before {
+    background-image: url(../../assets_template/img/icon-location.svg);
+    height: 1.6rem;
+    width: 1.6rem;
+  }
