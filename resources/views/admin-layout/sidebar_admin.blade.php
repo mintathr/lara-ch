@@ -25,6 +25,14 @@
                     </a>
                 </li>
 
+                <li class="nav-header">CONFIG WEBSITE</li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.web.linkutube') }}" class="nav-link {{ request()->is('Admin/webconfig/*') ? 'active' : '' }}">
+                        <i class="nav-icon fab fa-youtube"></i>
+                        <p>Link Utube</p>
+                    </a>
+                </li>
+
                 <li class="nav-header">Absensi Pelkat</li>
                 <li class="nav-item has-treeview 
                 {{ request()->is('Admin/absensi/*') ? 'menu-open' : '' }}
@@ -55,7 +63,7 @@
                     </ul>
                 </li>
                 
-                <li class="nav-header">Jemaat</li>
+                <li class="nav-header">JEMAAT</li>
                 <li class="nav-item has-treeview 
                 {{ request()->is('Admin/jemaat') ? 'menu-open' : '' }}
                 {{ request()->is('Admin/jemaat/edit/*') ? 'menu-open' : '' }}

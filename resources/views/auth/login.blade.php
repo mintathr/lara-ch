@@ -65,21 +65,6 @@
                     <input type="hidden" name="helper" value="08.01-01-">
                     <input type="text" name="email" class="form-control" placeholder="Nomor Jemaat" value="{{ old('email') }}">
                 </div>
-                <input type="hidden" name="password" value="semangat" class="form-control upass" placeholder="Password"> 
-                <!-- <div> -->
-                    
-                    <!-- <input type="checkbox" class="flat_check"> Show Password -->
-                <!-- </div> -->
-                {{-- <div class="mylogin">
-                    <ul>
-                        <li>
-                    <a href="" data-toggle="modal" data-target="#modal-lg">belum memiliki user login/ lupa Password?</a>
-                        </li>
-                        <li>
-                            <a href=""> password masih ingat, namun akun terblokir?</a>
-                        </li>
-                    </ul>
-                </div> --}}
                 <div>
                     <br />
                     <button type="submit" name="submit_login" class="btn btn-primary">
@@ -91,31 +76,6 @@
     </div>
 
 </div>
-
-
-<div class="modal fade" id="modal-lg">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Pendaftaran User Tim Marketing CBG (AOP, AO UMUM, AO, TL, CBM)
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div style="text-align: center" class="modal-body">
-                <p>Proses pendaftaran user Tim Marketing CBG (AOP, AO UMUM, AO, TL, CBM) dilakukan secara otomasi dengan syarat NIK yang bersangkutan terdaftar pada data Up-liner Aplikasi SCS.</p>
-                <p>User Login Menggunakan : </p>
-                <p>User ID : nik karyawan<br>
-                Password : <b>P@ssw0rd</b>
-                </p>
-                <p>Jika NIK sudah terdaftar pada data Up-liner Aplikasi SCS namun tidak dapat Login, Lupa Password maka harap menghubungi Kantor Pusat Commercial Banking & Mortgage Group.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 
 @push('script-show-pass')

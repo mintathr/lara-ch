@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ url('assets_skklweb/img/favicon.ico') }}" rel="icon">
+    <link href="{{ url('assets_skklweb/img/favicon/favicon.ico') }}" rel="icon">
 
     <link href="{{ url('assets_skklweb/fontawesome_v5/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ url('assets_skklweb/lib/animate/animate.min.css') }}" rel="stylesheet">
@@ -122,6 +122,9 @@
                         <li><a class="dropdown-item" href="#">PEG</a></li>
                         <li><a class="dropdown-item" href="{{ route('webskkl.komisi.il') }}">IL</a></li>
                     </ul>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link click-scroll" href="#">Blog</a>
+                    </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}" href="{{ route('webskkl') }}">Blog</a>
