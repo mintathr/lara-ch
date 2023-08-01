@@ -53,7 +53,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-church me-3"></i>GPIB SKKL</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-church me-3"></i>GPIB SANGKAKALA</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -122,6 +122,9 @@
                         <li><a class="dropdown-item" href="#">PEG</a></li>
                         <li><a class="dropdown-item" href="{{ route('webskkl.komisi.il') }}">IL</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}" href="{{ route('webskkl') }}">Blog</a>
                 </li>
             </ul>
                 <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
