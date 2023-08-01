@@ -11,6 +11,7 @@ use App\Http\Controllers\skklweb\WebSkklController;
 use App\Http\Controllers\sysadmin\DocumentController;
 use App\Http\Controllers\ppmj\PpmjDocumentationController;
 use App\Http\Controllers\pt\{PtHomeController, PtJematController};
+use App\Http\Controllers\sysadmin\WebConfigController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +109,10 @@ Route::prefix('Admin')->group(function () {
         Route::get('jemaat/searchHbd', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.searchHbd');
         Route::get('jemaat/searchHbdR', [JematController::class, 'getSearchCekHbd'])->name('admin.jemat.getSearchHbd');
     
+    ########## CONFIG WEBSKKL ##########
+    Route::get('webconfig/linkUtube', [WebConfigController::class, 'linkUtube'])->name('admin.web.linkutube');
+    Route::patch('webconfig/linkUtube/{id}', [WebConfigController::class, 'linkUtubeUpdate'])->name('admin.web.linkutubeUpdate');
+
     // LAMPIRAN - LAMPIRAN
     Route::get('lampiran', [DocumentController::class, 'index'])->name('admin.lampiran');
     Route::get('lampiran/upload', [DocumentController::class, 'create'])->name('admin.lampiran.upload.create');

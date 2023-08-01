@@ -104,7 +104,7 @@ class HomeController extends Controller
             #'nama_lengkap'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
             'tempat_lahir'      => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
             'tgl_lahir'         => 'required',
-            'tempat_baptis'     => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
+            #'tempat_baptis'     => 'required|regex:/(^([a-zA-Z0-9, ]+)(\d+)?$)/u',
             'tgl_baptis'        => 'required',
             #'tempat_sidi'       => 'required|regex:/(^([0-9]+)(\d+)?$)/u|min:10|max:10',
             #'tgl_sidi'          => 'required',

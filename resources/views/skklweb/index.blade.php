@@ -150,7 +150,7 @@
                     <div class="position-relative h-100">
                         <!-- <div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.6s"> -->
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/2dpwVg4poXg" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/{{ $linkUtube->link_utube }}" allowfullscreen></iframe>
                         </div>
                         <!-- </div> -->
                         <!-- <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;"> -->
@@ -158,13 +158,14 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Live Stream</h6>
-                    <h1 class="mb-4">Ibadah Hari Minggu</h1>
-                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.
-                    Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
+                    <h1 class="mb-4">{{ $linkUtube->subject }}</h1>
+                    <p class="mb-4">{{ $linkUtube->keterangan }}
+                        <br>
+                        {{ $linkUtube->sub_header }}
                     </p>
                     <p class="mb-4">
-                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export="><i class="fa fa-file-pdf"></i> warta jemaat</a>
-                        <a class="btn btn-primary mx-1" href=""><i class="fa fa-file-pdf"></i> tata ibadah</a>
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1nes6VnMYs63JVTr4pPIvEvYESZ1gHFlz"><i class="fa fa-file-pdf"></i> warta jemaat</a>
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1C_EZK4VEQrry1Ww0EMREkLGdVkdTxjai"><i class="fa fa-file-pdf"></i> tata ibadah</a>
                     </p>
                     <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">

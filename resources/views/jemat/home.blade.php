@@ -8,7 +8,7 @@
         <div class="col-md-12 col-sm-12"> --}}
             <div class="card card-secondary">
                 <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Update Data</h3>
                 </div>
                 <form role="form" method="POST" action="{{ route('jemat.update', $jemat->id) }}">
                     @method('patch')
