@@ -159,8 +159,12 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Live Stream</h6>
                     <h1 class="mb-4">Ibadah Hari Minggu</h1>
-                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.</p>
-                    <p class="mb-4">Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
+                    <p class="mb-4">IHM VII sesudah Pentakosta. Dan Ibadah utus sambut Pendeta dan selaku Ketua Majelis Jemaat GPIB Sangkakala DKI Jakarta.
+                    Belajar dari Yesus yang mau mendengar. Lukas 7 : 1-8.
+                    </p>
+                    <p class="mb-4">
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export="><i class="fa fa-file-pdf"></i> warta jemaat</a>
+                        <a class="btn btn-primary mx-1" href=""><i class="fa fa-file-pdf"></i> tata ibadah</a>
                     </p>
                     <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
@@ -348,7 +352,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url('assets_skklweb/img/vonni.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -402,7 +406,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url('assets_skklweb/img/sarwoto.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">

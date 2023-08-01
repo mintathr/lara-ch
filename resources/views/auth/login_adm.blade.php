@@ -64,7 +64,7 @@
                 <div>
                     <input type="text" name="email" class="form-control" placeholder="username" value="{{ old('email') }}">
                 </div>
-                <input type="password" name="password" value="2023.sekretariat" class="form-control upass" placeholder="Password"> 
+                <input type="password" name="password" class="form-control upass" placeholder="Password"> 
                 <div>
                     
                     <input type="checkbox" class="flat_check"> Show Password
