@@ -3,6 +3,9 @@ push with https => git push origin
 push with ssh => git push github
 cek remote git remote -v
 
+bila error "hint: You have divergent branches and need to specify how to reconcile them."
+git config --global  pull.ff true
+
 composer diagnose -vvv
 
 https://medium.com/@dennissmink/laravel-create-auth-lock-screen-11d6014fb8a1
