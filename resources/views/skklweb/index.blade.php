@@ -164,8 +164,8 @@
                         {{ $linkUtube->sub_header }}
                     </p>
                     <p class="mb-4">
-                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1nes6VnMYs63JVTr4pPIvEvYESZ1gHFlz"><i class="fa fa-file-pdf"></i> warta jemaat</a>
-                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1C_EZK4VEQrry1Ww0EMREkLGdVkdTxjai"><i class="fa fa-file-pdf"></i> tata ibadah</a>
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1_drfAKSJgrRAQNn_1jJaQIwcDR9NpWW6"><i class="fa fa-file-pdf"></i> warta jemaat</a>
+                        <a class="btn btn-primary mx-1" href="https://drive.google.com/uc?export=download&id=1MUZNZj4htwaFw_rJfzw7MxLG5x394U-h"><i class="fa fa-file-pdf"></i> tata ibadah</a>
                     </p>
                     <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
