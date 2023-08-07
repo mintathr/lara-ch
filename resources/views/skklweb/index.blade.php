@@ -16,7 +16,7 @@
                             <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gereja Protestan Indonesia
                                 di Bagian Barat
                             </h5>
-                            <h1 class="display-3 text-white animated slideInDown">GPIB Sangkakala
+                            <h1 class="display-3 text-white animated slideInDown">Misi GPIB
                             </h1>
                             <p class="fs-5 text-white mb-4 pb-2">Memberdayakan Warga Gereja Secara Intergenerasional
                                 Guna Merawat Jejaring Sosial & Ekologis di Konteks Budaya Digital.
@@ -36,9 +36,10 @@
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-10 col-lg-8">
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Visi GPIB
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gereja Protestan Indonesia
+                                di Bagian Barat
                             </h5>
-                            <h1 class="display-3 text-white animated slideInDown">GPIB Sangkakala
+                            <h1 class="display-3 text-white animated slideInDown">Visi GPIB
                             </h1>
                             <p class="fs-5 text-white mb-4 pb-2">GPIB menjadi gereja yang mewujudkan damai sejahtera
                                 bagi seluruh ciptaanNya.</p>
@@ -173,10 +174,10 @@
                 </p>
                 <p class="mb-4">
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/uc?export=download&id=1nes6VnMYs63JVTr4pPIvEvYESZ1gHFlz"><i
+                        href="https://drive.google.com/uc?export=download&id=1_drfAKSJgrRAQNn_1jJaQIwcDR9NpWW6"><i
                             class="fa fa-file-pdf"></i> warta jemaat</a>
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/uc?export=download&id=1C_EZK4VEQrry1Ww0EMREkLGdVkdTxjai"><i
+                        href="https://drive.google.com/uc?export=download&id=1MUZNZj4htwaFw_rJfzw7MxLG5x394U-h"><i
                             class="fa fa-file-pdf"></i> tata ibadah</a>
                 </p>
                 <!-- <div class="row gy-2 gx-4 mb-4">
@@ -362,44 +363,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6282197144896"
-                                target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Pnt. Flora V. Pattynama</h5>
-                        <small>Sekretaris</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/62817775328"
-                                target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Dkn. Sri Ninta Sembiring</h5>
-                        <small>Sekretaris I</small>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
@@ -454,6 +417,44 @@
                     <div class="text-center p-4">
                         <h5 class="mb-0">Dkn. Anja D. Sembiring</h5>
                         <small>Ketua III</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6282197144896"
+                                target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Pnt. Flora V. Pattynama</h5>
+                        <small>Sekretaris</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/62817775328"
+                                target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Dkn. Sri Ninta Sembiring</h5>
+                        <small>Sekretaris I</small>
                     </div>
                 </div>
             </div>
