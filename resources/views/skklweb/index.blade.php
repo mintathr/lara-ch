@@ -353,13 +353,14 @@
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <!-- <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281365646316"
+                                target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0"> Name</h5>
-                        <small>KMJ</small>
+                        <h5 class="mb-0"> Pdt. Clara Y. Aipasa</h5>
+                        <small>Ketua Majelis Jemaat</small>
                     </div>
                 </div>
             </div>
@@ -382,7 +383,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.1s">
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
                         <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
@@ -420,7 +421,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
                         <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
@@ -458,7 +459,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.5s">
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
                         <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
@@ -521,5 +522,26 @@
 </div>
 
 <!-- pelkat End -->
+
+<!-- maps -->
+<div class="container-fluid p-1 mb-n5 section-padding" id="section_7">
+    {{-- <div class="container"> --}}
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Maps</h6>
+            <h1 class="mb-3">Lokasi Kami</h1>
+        </div>
+        {{-- <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.514165859173!2d106.7688641738955!3d-6.195685460695734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6e1cc393699%3A0xafff8859f3cb8e90!2sGPIB%20Sangkakala!5e0!3m2!1sid!2sid!4v1691465914014!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+        <iframe width="100%" height="100%" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=gpib sangkakala&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        {{--
+    </div> --}}
+</div>
+<!-- end maps -->
+
+
 
 @endsection
