@@ -77,6 +77,7 @@
                         <p>Ibadah Hari Minggu Pelayanan Anak di Gedung Serba Guna lt 1, pada pukul 09.00 wib.</p>
                     </div>
                 </div>
+            </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -86,7 +87,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="col-lg-3 col-sm-6 wow fadeInDown" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
