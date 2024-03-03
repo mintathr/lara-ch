@@ -21,15 +21,15 @@
                             </div>
                             <div class="form-group">
                                 <label>Tempat Lahir</label>
-                                <input type="text" name="tempat_lahir" class="form-control" id="reservation" placeholder="Tempat Lahir" value="{{ $jemat->tempat_lahir }}">
+                                <input type="text" name="tempat_lahir" class="form-control" id="" placeholder="Tempat Lahir" value="{{ $jemat->tempat_lahir }}">
                             </div>
                             <div class="form-group">
                                 <label>Tempat Baptis</label>
-                                <input type="text" class="form-control" name="tempat_baptis" id="reservation" placeholder="Tempat Baptis" value="{{ $jemat->tempat_baptis }}">
+                                <input type="text" class="form-control" name="tempat_baptis" id="" placeholder="Tempat Baptis" value="{{ $jemat->tempat_baptis }}">
                             </div>
                             <div class="form-group">
                                 <label>Tempat Sidi</label>
-                                <input type="text" class="form-control" name="tempat_sidi" id="reservation" placeholder="Tempat Sidi" value="{{ $jemat->tempat_sidi }}">
+                                <input type="text" class="form-control" name="tempat_sidi" id="" placeholder="Tempat Sidi" value="{{ $jemat->tempat_sidi }}">
                             </div>
                             <div class="form-group">
                                 <label>Tgl Nikah (Gereja)</label>
