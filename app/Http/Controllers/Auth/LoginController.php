@@ -109,16 +109,16 @@ class LoginController extends Controller
                 User::where('email', $b)->update([
                     'block' => 0,
                 ]);
-                if ($passw == "P@ssw0rd") {
+                /* if ($passw == "P@ssw0rd") {
                     return redirect()->route('changePasswordExp');
-                }
+                } */
 
-                if ($selisih_hari <= 90) {
+                #if ($selisih_hari <= 90) {
                     Alert::toast('Login Berhasil', 'success')->width('25rem')->padding('5px');
                     return redirect()->route('jemat.route');
-                } else {
+                /* } else {
                     return redirect()->route('changePasswordExp');
-                }
+                } */
             } elseif (auth()->user()->is_admin == 4 and auth()->user()->block <= 2) {
                 User::where('email', $b)->update([
                     'block' => 0,
