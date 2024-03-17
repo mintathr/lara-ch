@@ -124,8 +124,8 @@
   <script src="{{ url('assets_nice_admin/vendor/echarts/echarts.min.js') }}"></script>
   <script src="{{ url('assets_nice_admin/vendor/quill/quill.min.js') }}"></script> -->
   <script src="{{ url('assets_nice_admin/vendor/simple-datatables/simple-datatables.js') }}"></script>
-  <!-- <script src="{{ url('assets_nice_admin/vendor/tinymce/tinymce.min.js') }}"></script>
-  <script src="{{ url('assets_nice_admin/vendor/php-email-form/validate.js') }}"></script> -->
+  <script src="{{ url('assets_nice_admin/vendor/tinymce/tinymce.min.js') }}"></script>
+  <!-- <script src="{{ url('assets_nice_admin/vendor/php-email-form/validate.js') }}"></script> -->
 
   <!-- Template Main JS File -->
   <script src="{{ url('assets_nice_admin/js/main.js') }}"></script>

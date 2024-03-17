@@ -53,74 +53,77 @@
                   </tr>
                   <tr>
                     <th scope="row">PELKES</th>
-                    <td style="text-align: right;">?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_proyek_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_rutin_penerimaan+$pelkes_non_rutin_penerimaan+$pelkes_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($pelkes_rutin_pengeluaran+$pelkes_non_rutin_pengeluaran+$pelkes_proyek_pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">GERMASA</th>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($germasa_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_proyek_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_rutin_penerimaan+$germasa_non_rutin_penerimaan+$germasa_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($germasa_rutin_pengeluaran+$germasa_non_rutin_pengeluaran+$germasa_proyek_pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">PPSDI</th>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_proyek_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_rutin_penerimaan+$ppsdi_non_rutin_penerimaan+$ppsdi_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($ppsdi_rutin_pengeluaran+$ppsdi_non_rutin_pengeluaran+$ppsdi_proyek_pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">PEG</th>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($peg_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_proyek_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_rutin_penerimaan+$peg_non_rutin_penerimaan+$peg_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($peg_rutin_pengeluaran+$peg_non_rutin_pengeluaran+$peg_proyek_pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">IL</th>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($il_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_proyek_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_rutin_penerimaan+$il_non_rutin_penerimaan+$il_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($il_rutin_pengeluaran+$il_non_rutin_pengeluaran+$il_proyek_pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row" rowspan="2" style="vertical-align: middle;text-align:center;">TOTAL</th>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td style="text-align: right;">{{ number_format($tpg_rutin_penerimaan+$pelkes_rutin_penerimaan+$germasa_rutin_penerimaan+$ppsdi_rutin_penerimaan+$peg_rutin_penerimaan+$il_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($tpg_rutin_pengeluaran+$pelkes_rutin_pengeluaran+$germasa_rutin_pengeluaran+$ppsdi_rutin_pengeluaran+$peg_rutin_pengeluaran+$il_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($tpg_non_rutin_penerimaan+$pelkes_non_rutin_penerimaan+$germasa_non_rutin_penerimaan+$ppsdi_non_rutin_penerimaan+$peg_non_rutin_penerimaan+$il_non_rutin_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($tpg_non_rutin_pengeluaran+$pelkes_non_rutin_pengeluaran+$germasa_non_rutin_pengeluaran+$ppsdi_non_rutin_pengeluaran+$peg_non_rutin_pengeluaran+$il_non_rutin_pengeluaran) }}</td>
+                    <td style="text-align: right;">{{ number_format($tpg_proyek_penerimaan+$pelkes_proyek_penerimaan+$germasa_proyek_penerimaan+$ppsdi_proyek_penerimaan+$peg_proyek_penerimaan+$il_proyek_penerimaan) }}</td>
+                    <td style="text-align: right;">{{ number_format($tpg_proyek_pengeluaran+$pelkes_proyek_pengeluaran+$germasa_proyek_pengeluaran+$ppsdi_proyek_pengeluaran+$peg_proyek_pengeluaran+$il_proyek_pengeluaran) }}</td>
+                    <th style="vertical-align:middle;text-align: right;" rowspan="2">
+                    {{ number_format($tpg_rutin_penerimaan+$tpg_non_rutin_penerimaan+$tpg_proyek_penerimaan+$pelkes_rutin_penerimaan+$pelkes_non_rutin_penerimaan+$pelkes_proyek_penerimaan+$germasa_rutin_penerimaan+$germasa_non_rutin_penerimaan+$germasa_proyek_penerimaan+$ppsdi_rutin_penerimaan+$ppsdi_non_rutin_penerimaan+$ppsdi_proyek_penerimaan+$peg_rutin_penerimaan+$peg_non_rutin_penerimaan+$peg_proyek_penerimaan+$il_rutin_penerimaan+$il_non_rutin_penerimaan+$il_proyek_penerimaan) }}
+                    </th>
+                    <th style="vertical-align:middle;text-align: right;" rowspan="2">
+                    {{ number_format($tpg_rutin_pengeluaran+$tpg_non_rutin_pengeluaran+$tpg_proyek_pengeluaran+$pelkes_rutin_pengeluaran+$pelkes_non_rutin_pengeluaran+$pelkes_proyek_pengeluaran+$germasa_rutin_pengeluaran+$germasa_non_rutin_pengeluaran+$germasa_proyek_pengeluaran+$ppsdi_rutin_pengeluaran+$ppsdi_non_rutin_pengeluaran+$ppsdi_proyek_pengeluaran+$peg_rutin_pengeluaran+$peg_non_rutin_pengeluaran+$peg_proyek_pengeluaran+$il_rutin_pengeluaran+$il_non_rutin_pengeluaran+$il_proyek_pengeluaran) }}
+                    </th>
                   </tr>
                   <tr>
                     <th colspan="6" style="text-align: right;">GRAND TOTAL</th>
-                    <td>?</td>
-                    <td>?</td>
+                    
                   </tr>
                 </tbody>
               </table>

@@ -19,7 +19,7 @@
         <div class="col-12">
         <div class="card recent-sales overflow-auto">
             <div class="card-body">
-              <h5 class="card-title">Datatables Rencana PKA 2024 - 2025</h5>
+              <h5 class="card-title">Rencana PKA 2024 - 2025</h5>
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
