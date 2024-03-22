@@ -175,4 +175,16 @@ class pkaDocController extends Controller
         $pkadoc = PkaDoc::where('no_pka', $pkadoc->no_pka)->first();
         return view('pka_doc.show', compact('pkadoc'));
     }
+
+    public function download()
+    {
+        $nama_file = '2024_skkl_rencana_pka.xlsx';
+        $file = storage_path() . "/app/public/2024_skkl_rencana_pka.xlsx";
+
+        $headers = [
+            'Content-Type' => 'application/vnd.ms-excel',
+        ];
+
+        return response()->download($file, $nama_file, $headers);
+    }
 }
