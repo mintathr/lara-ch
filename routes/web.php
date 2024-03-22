@@ -40,6 +40,7 @@ Route::get('/login', function () {
 
 
 // pka
+Route::get('pka/download', [pkaDocController::class, 'download'])->name('pka.download');
 Route::get('pka/dashboard', [pkaDocController::class, 'dashboard'])->name('pka.dashboard');
 Route::get('pka', [pkaDocController::class, 'index'])->name('pka.index');
 Route::get('pka/show/{pkadoc:no_pka}', [pkaDocController::class, 'show'])->name('pka.show');
