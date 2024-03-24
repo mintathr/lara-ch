@@ -61,11 +61,11 @@
                   </tr>
                   <tr>
                     <th scope="row">Penerimaan</th>
-                    <td>{{ $pkadoc->penerimaan }}</td>
+                    <td>{{ number_format($pkadoc->penerimaan) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">Pengeluaran</th>
-                    <td>{{ $pkadoc->pengeluaran }}</td>
+                    <td>{{ number_format($pkadoc->pengeluaran) }}</td>
                   </tr>
                   <tr>
                     <th scope="row">Keterangan</th>
