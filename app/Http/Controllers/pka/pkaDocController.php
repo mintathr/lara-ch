@@ -178,8 +178,8 @@ class pkaDocController extends Controller
 
     public function download()
     {
-        $nama_file = '2024_skkl_rencana_pka.xlsx';
-        $file = storage_path() . "/app/public/2024_skkl_rencana_pka.xlsx";
+        $nama_file = 'skkl_pka_2024.xlsx';
+        $file = storage_path() . "/app/public/skkl_pka_2024.xlsx";
 
         $headers = [
             'Content-Type' => 'application/vnd.ms-excel',
