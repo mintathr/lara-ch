@@ -63,16 +63,15 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Ibadah</h6>
             <h1 class="mb-5">Jadwal Ibadah</h1>
         </div>
-        <div class="row g-4">
+        <!-- <div class="row g-4">
             <div class="col-lg-12 col-sm-12 wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="alert alert-warning" role="alert">
                     <h4 class="alert-heading"><i class="fas fa-bullhorn"></i> Callout</h4>
                     <p>Sehubungan dengan HUT GPIB Sangkakala, khusus tanggal 28 April 2024 Ibadah Minggu Sore ditiadakan, digabung dengan Ibadah Pagi. Sehingga Ibadah Minggu pada tanggal tersebut hanya diadakan 1x.</p>
                     <hr>
-                    <!-- <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p> -->
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
@@ -189,9 +188,6 @@
                     <a class="btn btn-primary mx-1"
                         href="https://drive.google.com/uc?export=download&id=1MUZNZj4htwaFw_rJfzw7MxLG5x394U-h"><i
                             class="fa fa-file-pdf"></i> tata ibadah</a>
-                            <br>
-                            <br>
-                            Sehubungan dengan HUT GPIB Sangkakala, khusus tanggal 28 April 2024 Ibadah Minggu Sore ditiadakan, digabung dengan Ibadah Pagi.
                 </p>
                 <!-- <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
