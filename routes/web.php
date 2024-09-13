@@ -6,6 +6,7 @@ use App\Http\Controllers\DependantController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
 use App\Http\Controllers\PelkatAbsenceController;
+use App\Http\Controllers\pka\pkaDocController;
 use App\Http\Controllers\sysadmin\JematController;
 use App\Http\Controllers\skklweb\WebSkklController;
 use App\Http\Controllers\sysadmin\DocumentController;
@@ -36,6 +37,13 @@ Route::get('ppmj/edit/{id}', [PpmjDocumentationController::class, 'edit'])->name
 Route::get('/login', function () {
     return view('auth.login');
 });
+
+
+// pka
+Route::get('pka/download', [pkaDocController::class, 'download'])->name('pka.download');
+Route::get('pka/dashboard', [pkaDocController::class, 'dashboard'])->name('pka.dashboard');
+Route::get('pka', [pkaDocController::class, 'index'])->name('pka.index');
+Route::get('pka/show/{pkadoc:no_pka}', [pkaDocController::class, 'show'])->name('pka.show');
 
 
 Route::get('/test', function () {

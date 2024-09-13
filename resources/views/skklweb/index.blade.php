@@ -20,7 +20,7 @@
                             </h1>
                             <p class="fs-5 text-white mb-4 pb-2">Memberdayakan Warga Gereja Secara Intergenerasional
                                 Guna Merawat Jejaring Sosial & Ekologis di Konteks Budaya Digital.
-                                eirmod elitr.</p>
+                                </p>
                             <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
@@ -63,6 +63,15 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Ibadah</h6>
             <h1 class="mb-5">Jadwal Ibadah</h1>
         </div>
+        <!-- <div class="row g-4">
+            <div class="col-lg-12 col-sm-12 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading"><i class="fas fa-bullhorn"></i> Callout</h4>
+                    <p>Sehubungan dengan HUT GPIB Sangkakala, khusus tanggal 28 April 2024 Ibadah Minggu Sore ditiadakan, digabung dengan Ibadah Pagi. Sehingga Ibadah Minggu pada tanggal tersebut hanya diadakan 1x.</p>
+                    <hr>
+                </div>
+            </div>
+        </div> -->
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
@@ -78,15 +87,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user-friends text-primary mb-4"></i>
-                        <h5 class="mb-3">IHMPT</h5>
-                        <p>Ibadah Hari Minggu Pelayanan Anak di Gedung Serba Guna lt 2, pada pukul 09.00 wib.</p>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-friends text-primary mb-4"></i>
+                            <h5 class="mb-3">IHMPT</h5>
+                            <p>Ibadah Hari Minggu Persekutuan Teruna di Gedung Serba Guna lt 2, pada pukul 09.00 wib.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             <div class="col-lg-3 col-sm-6 wow fadeInDown" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
@@ -138,7 +147,7 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-user-plus text-primary mb-4"></i>
                         <h5 class="mb-3">Persekutuan Kaum Lanjut Usia</h5>
-                        <p>Ibadah Setiap Hari Sabtu di Gedung Gereja pada pukul 11.00 wib.</p>
+                        <p>Ibadah Setiap Hari Sabtu di Gedung Gereja pada pukul 11.00.</p>
                     </div>
                 </div>
             </div>
