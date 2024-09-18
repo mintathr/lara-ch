@@ -62,6 +62,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+########## CONFIG WEBSKKL ##########
+Route::get('linkUtube', [WebConfigController::class, 'linkUtubeNoSign'])->name('web.linkutube');
+Route::patch('linkUtube/{id}', [WebConfigController::class, 'linkUtubeNoSignUpdate'])->name('web.linkutubeUpdate');
+
 // absence
 Route::get('absensi-pt', [PelkatAbsenceController::class, 'absensiPt'])->name('absence.pt');
 Route::get('absensi-pa', [PelkatAbsenceController::class, 'absensiPa'])->name('absence.pa');
