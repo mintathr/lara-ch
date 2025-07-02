@@ -62,7 +62,13 @@
                         </li>
                     </ul>
                 </li>
-                
+                <li class="nav-item">
+                    <a href="{{ route('admin.web.linkutube') }}" class="nav-link {{ request()->is('Admin/webconfig/*') ? 'active' : '' }}">
+                        <i class="nav-icon far fa-pencil-alt"></i>
+                        <p>Kegiatan</p>
+                    </a>
+                </li>
+
                 <li class="nav-header">JEMAAT</li>
                 <li class="nav-item has-treeview 
                 {{ request()->is('Admin/jemaat') ? 'menu-open' : '' }}

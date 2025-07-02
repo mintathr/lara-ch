@@ -11,6 +11,7 @@ use App\Http\Controllers\sysadmin\JematController;
 use App\Http\Controllers\skklweb\WebSkklController;
 use App\Http\Controllers\sysadmin\DocumentController;
 use App\Http\Controllers\ppmj\PpmjDocumentationController;
+use App\Http\Controllers\Presence\AbsenceController;
 use App\Http\Controllers\pt\{PtHomeController, PtJematController};
 use App\Http\Controllers\sysadmin\WebConfigController;
 
@@ -57,6 +58,11 @@ Route::get('/ourteam', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// absence presensi
+Route::get('presensi', [AbsenceController::class, 'index'])->name('presensi');
+Route::post('presensi', [AbsenceController::class, 'store'])->name('presensi.store');
+
 
 Auth::routes();
 
