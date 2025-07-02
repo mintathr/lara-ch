@@ -3,16 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DependantController;
+use App\Http\Controllers\pka\pkaDocController;
+use App\Http\Controllers\SearchNameController;
 use App\Http\Controllers\jemat\UploadController;
 use App\Http\Controllers\jemat\ProfileController;
 use App\Http\Controllers\PelkatAbsenceController;
-use App\Http\Controllers\pka\pkaDocController;
 use App\Http\Controllers\sysadmin\JematController;
 use App\Http\Controllers\skklweb\WebSkklController;
+use App\Http\Controllers\Presence\AbsenceController;
 use App\Http\Controllers\sysadmin\DocumentController;
+use App\Http\Controllers\sysadmin\WebConfigController;
 use App\Http\Controllers\ppmj\PpmjDocumentationController;
 use App\Http\Controllers\pt\{PtHomeController, PtJematController};
-use App\Http\Controllers\sysadmin\WebConfigController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,9 +60,21 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+// absence presensi
+Route::get('presensi', [AbsenceController::class, 'index'])->name('presensi');
+Route::post('presensi', [AbsenceController::class, 'store'])->name('presensi.store');
+
+// search uName json
+Route::get('searchName', [SearchNameController::class, 'index'])->name('search.username');
+Route::get('searchNameJson', [SearchNameController::class, 'getSearchJson'])->name('search.username.json');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+########## CONFIG WEBSKKL ##########
+Route::get('linkUtube', [WebConfigController::class, 'linkUtubeNoSign'])->name('web.linkutube');
+Route::patch('linkUtube/{id}', [WebConfigController::class, 'linkUtubeNoSignUpdate'])->name('web.linkutubeUpdate');
 
 // absence
 Route::get('absensi-pt', [PelkatAbsenceController::class, 'absensiPt'])->name('absence.pt');

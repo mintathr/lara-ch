@@ -20,7 +20,7 @@
                             </h1>
                             <p class="fs-5 text-white mb-4 pb-2">Memberdayakan Warga Gereja Secara Intergenerasional
                                 Guna Merawat Jejaring Sosial & Ekologis di Konteks Budaya Digital.
-                                </p>
+                            </p>
                             <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
@@ -87,15 +87,15 @@
                     </div>
                 </div>
             </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user-friends text-primary mb-4"></i>
-                            <h5 class="mb-3">IHMPT</h5>
-                            <p>Ibadah Hari Minggu Persekutuan Teruna di Gedung Serba Guna lt 2, pada pukul 09.00 wib.</p>
-                        </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-user-friends text-primary mb-4"></i>
+                        <h5 class="mb-3">IHMPT</h5>
+                        <p>Ibadah Hari Minggu Persekutuan Teruna di Gedung Serba Guna lt 2, pada pukul 09.00 wib.</p>
                     </div>
                 </div>
+            </div>
             <div class="col-lg-3 col-sm-6 wow fadeInDown" data-wow-delay="0.5s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
@@ -183,10 +183,10 @@
                 </p>
                 <p class="mb-4">
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/uc?export=download&id=1_drfAKSJgrRAQNn_1jJaQIwcDR9NpWW6"><i
+                        href="https://drive.google.com/drive/folders/1nNQPA5oxTEp09B7MAGjvehxgZt7vi4zC"><i
                             class="fa fa-file-pdf"></i> warta jemaat</a>
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/uc?export=download&id=1MUZNZj4htwaFw_rJfzw7MxLG5x394U-h"><i
+                        href="https://drive.google.com/drive/folders/1nNQPA5oxTEp09B7MAGjvehxgZt7vi4zC"><i
                             class="fa fa-file-pdf"></i> tata ibadah</a>
                 </p>
                 <!-- <div class="row gy-2 gx-4 mb-4">

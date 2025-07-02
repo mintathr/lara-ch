@@ -17,7 +17,9 @@
     <link href="{{ url('assets_skklweb/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('assets_skklweb/css/style_ori.css') }}" rel="stylesheet">
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
@@ -37,13 +39,13 @@
             background-color: var(--secondary-color);
             color: var(--white-color);
         }
-
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -59,7 +61,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <!-- <div class="navbar-nav ms-auto p-4 p-lg-0">
                 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -72,7 +74,8 @@
         </div> -->
             <ul class="navbar-nav ms-auto p-4 p-lg-0">
                 <li class="nav-item">
-                    <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}" href="{{ route('webskkl') }}">Home</a>
+                    <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}"
+                        href="{{ route('webskkl') }}">Home</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-item nav-link click-scroll" href="#section_2">Jadwal Ibadah</a>
@@ -89,10 +92,13 @@
                 <li class="nav-item">
                     <a class="nav-item nav-link click-scroll" href="#section_6">Pelkata</a>
                 </li> -->
-                
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->is('diaken') ? 'active' : '' }} {{ request()->is('penatua') ? 'active' : '' }}" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Presbiter</a>
-                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                    <a class="nav-link dropdown-toggle {{ request()->is('diaken') ? 'active' : '' }} {{ request()->is('penatua') ? 'active' : '' }}"
+                        href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Presbiter</a>
+                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light"
+                        aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{ route('webskkl.diaken') }}">Diaken</a></li>
                         <li><a class="dropdown-item" href="{{ route('webskkl.penatua') }}">Penatua</a></li>
                     </ul>
@@ -100,8 +106,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle
                     {{ request()->is('pelkat-pt') ? 'active' : '' }}
-                    " href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pelkat</a>
-                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                    " href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Pelkat</a>
+                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light"
+                        aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">PA</a></li>
                         <li><a class="dropdown-item" href="{{ route('webskkl.pelkat.pt') }}">PT</a></li>
                         <li><a class="dropdown-item" href="#">GP</a></li>
@@ -114,8 +122,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle
                     {{ request()->is('komisi-il') ? 'active' : '' }}
-                    " href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Komisi</a>
-                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                    " href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Komisi</a>
+                    <ul class="dropdown-menu fade-down m-0 dropdown-menu-light"
+                        aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Theologi</a></li>
                         <li><a class="dropdown-item" href="#">Germasa</a></li>
                         <li><a class="dropdown-item" href="#">PPSDI</a></li>
@@ -124,11 +134,13 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}" href="{{ route('webskkl') }}">Blog</a>
+                    <a class="nav-item nav-link click-scroll {{ request()->is('website') ? 'active' : '' }}"
+                        href="{{ route('webskkl') }}">Blog</a>
                 </li>
             </ul>
-                <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i class="fa fa-arrow-right ms-3"></i></a>
-            
+            <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Member Area<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+
         </div>
     </nav>
     <!-- Navbar End -->
@@ -152,25 +164,30 @@
                 </div>
                 <div class="col-lg-8 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Teratai Ujung No. 155 A, Komplek Kodam Kebon Jeruk Jakarta Barat 11530</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Teratai Ujung No. 155 A, Komplek Kodam
+                        Kebon Jeruk Jakarta Barat 11530</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>021 5491545</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>sekretariat@gpibskkl.com</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>gpib.skkl@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@gpibsangkakala" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/harapan.selaluada"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@gpibsangkakala"
+                            target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.instagram.com/harapan.selaluada"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-              
+
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2023<?= (date('Y') > 2021 ? ' - ' . date('Y') : '') ?> <a class="" href="https://gpibskkl.com">GPIB Sangkakala Jakarta Barat</a>, All Right Reserved.
+                        &copy; 2023
+                        <?= (date('Y') > 2021 ? ' - ' . date('Y') : '') ?> <a class="" href="https://gpibskkl.com">GPIB
+                            Sangkakala Jakarta Barat</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -186,7 +203,7 @@
     </div>
     <!-- Footer End -->
 
-    
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
