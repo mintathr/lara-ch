@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "gpibskkl.com",
+  "Id": "46af71ad-7e6f-4ac1-bd3b-480ed6ed6045"
+}
