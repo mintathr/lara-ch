@@ -376,18 +376,18 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/628126033399"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/628129317212"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Pnt. Betty H. Hassim</h5>
+                        <h5 class="mb-0">Pnt. Sumantri Purba</h5>
                         <small>Ketua I</small>
                     </div>
                 </div>
@@ -420,12 +420,12 @@
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281514342393"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/62811771958"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Dkn. Anja D. Sembiring</h5>
+                        <h5 class="mb-0">Pnt. Rudy Lumentut</h5>
                         <small>Ketua III</small>
                     </div>
                 </div>
@@ -439,12 +439,12 @@
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6282197144896"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/628161437690"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Pnt. Flora V. Pattynama</h5>
+                        <h5 class="mb-0">Pnt. Silvya A. Tupamahu</h5>
                         <small>Sekretaris</small>
                     </div>
                 </div>
@@ -458,12 +458,12 @@
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/62817775328"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/628129426364"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Dkn. Sri Ninta Sembiring</h5>
+                        <h5 class="mb-0">Dkn. Eva Marbun</h5>
                         <small>Sekretaris I</small>
                     </div>
                 </div>
@@ -477,12 +477,12 @@
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6285319633307"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281398054475"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Dkn. Delima S. H. Tengker</h5>
+                        <h5 class="mb-0">Dkn. Novny M. Pormes</h5>
                         <small>Bendahara</small>
                     </div>
                 </div>
