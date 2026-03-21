@@ -3,6 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>GPIB SANGKAKALA</title>
+     @production
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ env('GOOGLE_ADSENSE_CLIENT_ID') }}"
+     crossorigin="anonymous"></script>
+    @endproduction
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
