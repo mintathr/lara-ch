@@ -183,10 +183,10 @@
                 </p>
                 <p class="mb-4">
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/drive/folders/1nNQPA5oxTEp09B7MAGjvehxgZt7vi4zC"><i
+                        href="https://gpibskkl-my.sharepoint.com/:b:/r/personal/mulmed_dua_gpibskkl_com/Documents/01.%20Tata%20Ibadah/WJ%2016,%2012%20April%20%202026%20FINAL.pdf?csf=1&web=1&e=LoL3Qq" target="_blank"><i
                             class="fa fa-file-pdf"></i> warta jemaat</a>
                     <a class="btn btn-primary mx-1"
-                        href="https://drive.google.com/drive/folders/1nNQPA5oxTEp09B7MAGjvehxgZt7vi4zC"><i
+                        href="https://gpibskkl-my.sharepoint.com/:b:/r/personal/mulmed_dua_gpibskkl_com/Documents/01.%20Tata%20Ibadah/TI,%2016,%2012%20April%202026%20Pagi%20FINAL.pdf?csf=1&web=1&e=mgGaEX/preview" target="_blank4"><i
                             class="fa fa-file-pdf"></i> tata ibadah</a>
                 </p>
                 <!-- <div class="row gy-2 gx-4 mb-4">
