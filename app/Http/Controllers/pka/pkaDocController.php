@@ -178,11 +178,11 @@ class pkaDocController extends Controller
 
     public function download()
     {
-        $nama_file = 'skkl_pka_2026.pdf';
+        $nama_file = 'skkl_pka_2026.xlsx';
         $file = storage_path() . "/app/public/".$nama_file;
 
         $headers = [
-            'Content-Type' => 'application/pdf',
+            #'Content-Type' => 'application/pdf',
             'Content-Type' => 'application/vnd.ms-excel',
         ];
 
