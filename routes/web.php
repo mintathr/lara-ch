@@ -75,6 +75,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 ########## CONFIG WEBSKKL ##########
 Route::get('linkUtube', [WebConfigController::class, 'linkUtubeNoSign'])->name('web.linkutube');
 Route::patch('linkUtube/{id}', [WebConfigController::class, 'linkUtubeNoSignUpdate'])->name('web.linkutubeUpdate');
+#Route::get('/uploadtaib', [WebConfigController::class, 'index'])->name('upload.index');
+Route::post('/uploadtaib', [WebConfigController::class, 'store'])->name('upload.store');
 
 // absence
 Route::get('absensi-pt', [PelkatAbsenceController::class, 'absensiPt'])->name('absence.pt');
