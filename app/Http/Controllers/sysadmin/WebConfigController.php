@@ -91,7 +91,9 @@ class WebConfigController extends Controller
             // 4. Simpan file baru
             $path = $file->storeAs("public/{$kategori}", $permanentName);
 
-            return response($path, 200)->header('Content-Type', 'text/plain');
+            #return response($path, 200)->header('Content-Type', 'text/plain');
+            // SEKARANG:
+            return response($file->getClientOriginalName(), 200)->header('Content-Type', 'text/plain');
         }
 
         return response()->json(['error' => 'Tidak ada file.'], 400);

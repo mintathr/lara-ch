@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload dengan FilePond</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- FilePond Stylesheets -->
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
-    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <style>
         .filepond--credits {
             display: none !important;
@@ -83,99 +83,183 @@
             <div class="flex-grow border-t border-red-700"></div>
         </div>
     <!-- ==================== PILIHAN KATEGORI ==================== -->
-        <div class="mb-6">
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-3">
-                Pilih Kategori
-            </label>
-            <div class="grid grid-cols-2 gap-4">
-                <label id="label-wj" class="group relative flex items-center justify-between p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl cursor-pointer hover:bg-blue-50/30 hover:border-blue-500 transition-all duration-200 class-active-wj">
-                    <input type="radio" name="kategori" value="wj" class="sr-only" checked>
-                    <div class="flex flex-col">
-                        <span class="font-bold text-gray-800 text-base">WJ</span>
-                        <span class="text-xs text-gray-400 group-hover:text-blue-500 transition-colors">Kategori Dokumen WJ</span>
-                    </div>
-                    <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-blue-500 radio-dot">
-                        <div class="w-2.5 h-2.5 rounded-full bg-blue-600 hidden dot-inner"></div>
-                    </div>
-                </label>
-                
-                <label id="label-taib" class="group relative flex items-center justify-between p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl cursor-pointer hover:bg-blue-50/30 hover:border-blue-500 transition-all duration-200">
-                    <input type="radio" name="kategori" value="taib" class="sr-only">
-                    <div class="flex flex-col">
-                        <span class="font-bold text-gray-800 text-base">TAIB</span>
-                        <span class="text-xs text-gray-400 group-hover:text-blue-500 transition-colors">Kategori Dokumen TAIB</span>
-                    </div>
-                    <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-blue-500 radio-dot">
-                        <div class="w-2.5 h-2.5 rounded-full bg-blue-600 hidden dot-inner"></div>
-                    </div>
-                </label>
+        <!-- ==================== PILIHAN KATEGORI ==================== -->
+<div class="mb-6">
+    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-3">
+        Pilih Kategori Dokumen
+    </label>
+    <div class="grid grid-cols-2 gap-4">
+        <!-- Radio WJ -->
+        <label id="label-wj" class="group relative flex items-center justify-between p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl cursor-pointer hover:bg-blue-50/30 hover:border-blue-500 transition-all duration-200">
+            <input type="radio" name="kategori" value="wj" class="sr-only" checked>
+            <div class="flex flex-col">
+                <span class="font-bold text-gray-800 text-base">WJ</span>
+                <span class="text-xs text-gray-400 group-hover:text-blue-500 transition-colors">Kategori Dokumen WJ</span>
             </div>
-        </div>
+            <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-blue-500 radio-dot">
+                <div class="w-2.5 h-2.5 rounded-full bg-blue-600 hidden dot-inner"></div>
+            </div>
+        </label>
+        
+        <!-- Radio TAIB -->
+        <label id="label-taib" class="group relative flex items-center justify-between p-4 bg-gray-50 border-2 border-gray-200 rounded-2xl cursor-pointer hover:bg-blue-50/30 hover:border-blue-500 transition-all duration-200">
+            <input type="radio" name="kategori" value="taib" class="sr-only">
+            <div class="flex flex-col">
+                <span class="font-bold text-gray-800 text-base">TAIB</span>
+                <span class="text-xs text-gray-400 group-hover:text-blue-500 transition-colors">Kategori Dokumen TAIB</span>
+            </div>
+            <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-blue-500 radio-dot">
+                <div class="w-2.5 h-2.5 rounded-full bg-blue-600 hidden dot-inner"></div>
+            </div>
+        </label>
+    </div>
+</div>
 
-        <!-- ==================== AREA DROP FILEPOND ==================== -->
-        <div class="disabled-pond opacity-40 pointer-events-none transition-all duration-300 transform scale-98" id="pond-wrapper">
-            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
-                Upload File PDF
-            </label>
-            <div class="rounded-2xl overflow-hidden border border-dashed border-gray-300 bg-gray-50/30 p-1">
-                <input type="file" class="filepond" name="filepond" accept="application/pdf" data-max-file-size="2MB">
-            </div>
+<!-- ==================== AREA DROP FILEPOND (TERPISAH UI) ==================== -->
+<div class="space-y-4">
+    <!-- Container Upload WJ -->
+    <div id="wrapper-wj" class="transition-all duration-300 transform">
+        <label class="block text-xs font-bold text-blue-700 uppercase tracking-wider mb-2">
+            Upload File PDF - Kategori WJ
+        </label>
+        <div class="rounded-2xl overflow-hidden border border-dashed border-blue-300 bg-blue-50/10 p-1">
+            <!-- Name disamakan kembali menjadi 'filepond' sesuai Controller -->
+            <input type="file" id="pond-wj" name="filepond" accept="application/pdf" data-max-file-size="2MB">
         </div>
     </div>
 
-    <!-- FilePond JavaScript -->
-    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <!-- Container Upload TAIB -->
+    <div id="wrapper-taib" class="hidden transition-all duration-300 transform">
+        <label class="block text-xs font-bold text-green-700 uppercase tracking-wider mb-2">
+            Upload File PDF - Kategori TAIB
+        </label>
+        <div class="rounded-2xl overflow-hidden border border-dashed border-green-300 bg-green-50/10 p-1">
+            <!-- Name disamakan kembali menjadi 'filepond' sesuai Controller -->
+            <input type="file" id="pond-taib" name="filepond" accept="application/pdf" data-max-file-size="2MB">
+        </div>
+    </div>
+</div>
 
-    <script>
-        // Registrasi plugin validasi tipe file ke FilePond
-        FilePond.registerPlugin(FilePondPluginFileValidateType);
+<!-- FilePond JavaScript -->
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 
-        const inputElement = document.querySelector('input[type="file"]');
-        const pond = FilePond.create(inputElement, {
-            // Beri pesan kustom jika user nekat drop file non-PDF
-            labelFileTypeNotAllowed: 'File bukan PDF',
-            fileValidateTypeLabelExpectedTypes: 'Hanya menerima file .pdf'
+<script>
+    // Registrasi plugin validasi tipe file ke FilePond
+    FilePond.registerPlugin(FilePondPluginFileValidateType);
+
+    // Opsi dasar FilePond + Inject CSRF Token agar terbaca Laravel
+    const basePondOptions = {
+        labelFileTypeNotAllowed: 'File bukan PDF',
+        fileValidateTypeLabelExpectedTypes: 'Hanya menerima file .pdf',
+        server: {
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        }
+    };
+
+    function showSuccessAlert(kategori) {
+    Swal.fire({
+        title: 'Berhasil!',
+        text: `File ${kategori.toUpperCase()} berhasil diunggah.`,
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Oke'
+    });
+}
+
+    // Inisialisasi FilePond WJ (Target URL: /store?kategori=wj)
+    const pondWJ = FilePond.create(document.getElementById('pond-wj'), {
+        ...basePondOptions,
+        // Mengubah display nama file yang tampil di UI FilePond
+        server: {
+            ...basePondOptions.server,
+            process: {
+                url: '/uploadtaib?kategori=wj', // Sesuaikan dengan URL route store Anda
+                
+                onerror: (response) => {
+                    const res = JSON.parse(response);
+                    return res.error || 'Gagal mengunggah file WJ';
+                }
+            }
+        }
+    });
+    // Trigger SweetAlert saat FilePond WJ selesai process (upload sukses)
+    pondWJ.on('processfile', (error, file) => {
+        if (!error) {
+            showSuccessAlert('wj');
+        }
+    });
+
+    // Inisialisasi FilePond TAIB (Target URL: /store?kategori=taib)
+    const pondTAIB = FilePond.create(document.getElementById('pond-taib'), {
+        ...basePondOptions,
+        server: {
+            ...basePondOptions.server,
+            process: {
+                url: '/uploadtaib?kategori=taib', // Sesuaikan dengan URL route store Anda
+                onerror: (response) => {
+                    const res = JSON.parse(response);
+                    return res.error || 'Gagal mengunggah file TAIB';
+                }
+            }
+        }
+    });
+    // Trigger SweetAlert saat FilePond TAIB selesai process (upload sukses)
+    pondTAIB.on('processfile', (error, file) => {
+        if (!error) {
+            showSuccessAlert('taib');
+        }
+    });
+
+    // --- SCRIPT TOGGLE VISIBILITAS KATEGORI ---
+    const radios = document.querySelectorAll('input[name="kategori"]');
+    const wrapperWJ = document.getElementById('wrapper-wj');
+    const wrapperTAIB = document.getElementById('wrapper-taib');
+
+    function toggleKategoriUI(value) {
+        // Reset styling semua radio button
+        radios.forEach(r => {
+            const label = r.parentElement;
+            const dot = label.querySelector('.dot-inner');
+            label.classList.remove('border-blue-500', 'bg-blue-50');
+            if (dot) dot.classList.add('hidden');
         });
 
-        let kategoriTerpilih = '';
-
-        function updateFilePondServer(kategori) {
-            pond.setOptions({
-                server: {
-                    process: {
-                        url: `/uploadtaib?kategori=${kategori}`,
-                        headers: {
-                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                        },
-                        // Menangani error dari Laravel jika lolos validasi client-side
-                        onerror: (response) => {
-                            const res = JSON.parse(response);
-                            return res.error || 'Gagal mengunggah file';
-                        }
-                    }
-                }
-            });
-            
-            document.getElementById('pond-wrapper').classList.remove('opacity-50', 'pointer-events-none');
+        // Aktifkan styling radio button yang dipilih
+        const activeRadio = document.querySelector(`input[name="kategori"][value="${value}"]`);
+        if (activeRadio) {
+            const activeLabel = activeRadio.parentElement;
+            const activeDot = activeLabel.querySelector('.dot-inner');
+            activeLabel.classList.add('border-blue-500', 'bg-blue-50');
+            if (activeDot) activeDot.classList.remove('hidden');
         }
 
-        // (Sisa script radio button kategori tetap sama seperti sebelumnya...)
-        const radios = document.querySelectorAll('input[name="kategori"]');
-        radios.forEach(radio => {
-            if(radio.checked) {
-                radio.parentElement.classList.add('border-blue-500', 'bg-blue-50');
-                kategoriTerpilih = radio.value;
-                updateFilePondServer(kategoriTerpilih);
+        // Tampilkan/Sembunyikan kotak FilePond secara dinamis
+        if (value === 'wj') {
+            wrapperWJ.classList.remove('hidden');
+            wrapperTAIB.classList.add('hidden');
+        } else if (value === 'taib') {
+            wrapperTAIB.classList.remove('hidden');
+            wrapperWJ.classList.add('hidden');
+        }
+    }
+
+    // Event handler saat user klik ganti kategori
+    radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.checked) {
+                toggleKategoriUI(this.value);
             }
-            radio.addEventListener('change', function() {
-                radios.forEach(r => r.parentElement.classList.remove('border-blue-500', 'bg-blue-50'));
-                if(this.checked) {
-                    this.parentElement.classList.add('border-blue-500', 'bg-blue-50');
-                    kategoriTerpilih = this.value;
-                    updateFilePondServer(kategoriTerpilih);
-                }
-            });
         });
-    </script>
+    });
+
+    // Jalankan check pertama saat halaman di-load
+    const initialChecked = document.querySelector('input[name="kategori"]:checked');
+    if (initialChecked) {
+        toggleKategoriUI(initialChecked.value);
+    }
+</script>
+    
 </body>
 </html>
