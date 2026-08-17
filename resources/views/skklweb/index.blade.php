@@ -3,6 +3,118 @@
 
 @section('content')
 
+<style>
+    /* Menggunakan nama kelas yang unik agar tidak bentrok dengan template lain */
+    .popup-jemaat-content {
+        overflow: hidden;
+        border-radius: 0.5rem;
+        border: none;
+        max-height: 85vh; /* batasi tinggi modal agar tidak melebihi viewport */
+    }
+
+    /* Container body untuk layout fleksibel kiri (gambar) + kanan (konten) */
+    .popup-jemaat-body {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    /* Kolom gambar: gunakan fixed-basis agar tampil portrait */
+    .popup-jemaat-left {
+        flex: 0 0 380px;
+        max-width: 380px;
+        height: 100%;
+    }
+
+    .popup-jemaat-left .popup-jemaat-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+    }
+
+    /* Kolom konten fleksibel, scroll jika konten tinggi */
+    .popup-jemaat-right {
+        flex: 1 1 0;
+        overflow: auto;
+        min-width: 0; /* penting agar teks wrapping bekerja di flex */
+    }
+
+    /* Responsif: tumpuk kolom pada layar kecil */
+    @media (max-width: 991.98px) {
+        .popup-jemaat-body {
+            flex-wrap: wrap;
+        }
+        .popup-jemaat-left {
+            flex-basis: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .popup-jemaat-left .popup-jemaat-img {
+            height: auto;
+            max-height: 450px;
+            width: 100%;
+            object-fit: contain; /* tampilkan keseluruhan gambar tanpa crop di mobile */
+            background-color: #000; /* agar area tambahan terlihat serasi */
+        }
+        .popup-jemaat-right {
+            padding: 1rem 1rem 1.25rem 1rem;
+        }
+    }
+
+    /* Mobile: make modal scrollable and stack columns vertically */
+    @media (max-width: 575.98px) {
+        .popup-jemaat-content {
+            max-height: 90vh;
+        }
+        .popup-jemaat-body {
+            flex-direction: column;
+            height: auto;
+        }
+        /* Tetapkan tinggi kolom gambar agar gambar portrait mengisi penuh tanpa terpotong */
+        .popup-jemaat-left {
+            flex-basis: 100%;
+            max-width: 100%;
+            height: 60vh; /* tinggi tetap untuk gambar portrait */
+        }
+        .popup-jemaat-left .popup-jemaat-img {
+            max-height: 100%;
+            width: auto;
+            height: 100%;
+            object-fit: contain; /* pastikan keseluruhan gambar terlihat */
+            display: block;
+            margin: 0 auto;
+            background-color: #000;
+        }
+        .popup-jemaat-right {
+            max-height: calc(90vh - 60vh);
+            overflow: auto;
+        }
+    }
+
+    /* Extra mobile fixes: ensure modal/dialog allow internal scrolling and smooth touch scroll */
+    @media (max-width: 575.98px) {
+        .modal {
+            overflow: auto !important;
+        }
+        .modal-dialog {
+            max-height: 95vh;
+            margin: 1rem;
+        }
+        .popup-jemaat-content {
+            max-height: 95vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .popup-jemaat-right {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+</style>
+  
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5 section-padding" id="section_1">
     <div class="owl-carousel header-carousel position-relative">
@@ -551,6 +663,64 @@
 </div>
 <!-- end maps -->
 
+<!-- Modal Pop-up -->
+    <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content popup-jemaat-content shadow-lg">
+            <div class="modal-body p-0 position-relative popup-jemaat-body">
+                
+                <!-- Tombol Close -->
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3 bg-white p-2 rounded-circle shadow-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                <div class="row g-0 align-items-center">
+                    <!-- Kolom Gambar dengan kelas unik -->
+                    <div class="col-lg-5 popup-jemaat-left bg-dark d-flex justify-content-center align-items-center p-0">
+                        <img src="{{ url('assets_skklweb/img/sertijab.jpeg') }}" alt="Utus Sambut" class="popup-jemaat-img">
+                    </div>
+                    
+                    <!-- Kolom Konten Pengumuman -->
+                    <div class="col-lg-7 popup-jemaat-right p-4 p-lg-5">
+                        <span class="badge bg-danger mb-2">Pengumuman Penting</span>
+                        <h4 class="fw-bold mb-3" id="announcementModalLabel">Utus Sambut Ketua Majelis Jemaat</h4>
+                        
+                        <p class="text-secondary small mb-3">
+                            Dalam rangka Acara <strong>Utus Sambut Ketua Majelis Jemaat</strong> yang akan diadakan pada:
+                        </p>
+                        
+                        <ul class="list-unstyled small text-secondary mb-3 ps-2 border-start border-3 border-danger">
+                            <li>📅 <strong>Hari/Tanggal:</strong> Minggu, 24 Agustus 2026</li>
+                            <li>⏰ <strong>Pukul:</strong> 16.00 WIB</li>
+                        </ul>
 
+                        <p class="text-secondary small mb-3">
+                            Maka seluruh pelaksanaan <strong>Ibadah Hari Minggu</strong> pada tanggal tersebut ditiadakan, meliputi:
+                        </p>
+
+                        <ul class="small text-secondary mb-4">
+                            <li>IHMPA & IHMPT</li>
+                            <li>IHM Pukul 09.00 WIB</li>
+                            <li>IHM Pukul 18.00 WIB</li>
+                        </ul>
+
+                        <div class="alert alert-warning small mb-0 py-2" role="alert">
+                            Jemaat diundang untuk bersama-sama mengikuti ibadah dan acara utus sambut pada pukul 16.00 WIB. Tuhan memberkati.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Script untuk Otomatis Menampilkan Pop-up saat Halaman Dimuat -->
+     
+    <script>
+        var myModal;
+        document.addEventListener("DOMContentLoaded", function() {
+            var modalEl = document.getElementById('announcementModal');
+            myModal = new bootstrap.Modal(modalEl);
+            myModal.show();
+        });
+    </script>
+  
 
 @endsection

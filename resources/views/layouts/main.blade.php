@@ -179,6 +179,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ url('assets_template/js/main.js') }}"></script>
+
+    
 </body>
 
 </html>
