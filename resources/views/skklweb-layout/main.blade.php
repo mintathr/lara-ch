@@ -19,7 +19,7 @@
     <link href="{{ url('assets_skklweb/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ url('assets_skklweb/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ url('assets_skklweb/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url('assets_skklweb/css/style_ori.css') }}" rel="stylesheet">
+    <link href="{{ url('assets_skklweb/css/style_ori.css') }}?v={{ filemtime(public_path('assets_skklweb/css/style_ori.css')) }}" rel="stylesheet">
     <!-- Google Web Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
