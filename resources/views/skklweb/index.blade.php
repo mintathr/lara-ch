@@ -115,57 +115,64 @@
     }
 </style>
   
-<!-- Carousel Start -->
-<div class="container-fluid p-0 mb-5 section-padding" id="section_1">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{ url('assets_skklweb/img/gpibskkl.png') }}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, .7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gereja Protestan Indonesia
-                                di Bagian Barat
-                            </h5>
-                            <h1 class="display-3 text-white animated slideInDown">Misi GPIB
-                            </h1>
-                            <p class="fs-5 text-white mb-4 pb-2">Memberdayakan Warga Gereja Secara Intergenerasional
-                                Guna Merawat Jejaring Sosial & Ekologis di Konteks Budaya Digital.
-                            </p>
-                            <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+<!-- Hero / Welcome Start -->
+<section class="gpib-hero" id="section_1" aria-label="Welcome to GPIB Sangkakala">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="gpib-badge">Gereja Protestan Indonesia di Bagian Barat</div><br>
+                <span class="gpib-kicker">Visi GPIB</span>
+                <h2 class="gpib-vision-title">Gereja Yang Hidup Untuk Keadilan, Kebenaran dan Pemulihan</h2>
+                <h3 class="gpib-theme-title">Tema 5 Tahun</h3>
+                <p class="lead mb-4 text-muted">
+                    Tuhan Ada Terlebih Dahulu Dari Segala Sesuatu, dan Segala Sesuatu Ada di Dalam DIA (Kolose 1:17)
+                </p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="#section_2" class="btn btn-primary btn-lg px-4 py-3">Lihat Jadwal Ibadah</a>
+                    <a href="#section_3" class="btn btn-outline-primary btn-lg px-4 py-3">Live Streaming</a>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-sm-4">
+                        <div class="gpib-stat">
+                            <strong>09.00 WIB</strong>
+                            <span>Ibadah Pagi</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gpib-stat">
+                            <strong>18.00 WIB</strong>
+                            <span>Ibadah Sore</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gpib-stat">
+                            <strong>09.00 WIB</strong>
+                            <span>IHMPA & IHMPT</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{ url('assets_skklweb/img/gpib-sangkakala-setelah-renovasi.jpg') }}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, .7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gereja Protestan Indonesia
-                                di Bagian Barat
-                            </h5>
-                            <h1 class="display-3 text-white animated slideInDown">Visi GPIB
-                            </h1>
-                            <p class="fs-5 text-white mb-4 pb-2">GPIB menjadi gereja yang mewujudkan damai sejahtera
-                                bagi seluruh ciptaanNya.</p>
-                            <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="gpib-hero-card shadow-lg">
+                    <img src="{{ url('assets_skklweb/img/gpib-sangkakala-setelah-renovasi.jpg') }}" alt="GPIB Sangkakala" class="img-fluid gpib-hero-image">
+                    <div class="gpib-hero-card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="gpib-kicker">Misi GPIB</span>
+                            <span class="gpib-pill"><i class="fa fa-heart me-2"></i>Damai Sejahtera</span>
                         </div>
+                        <ul class="gpib-list list-unstyled mb-0">
+                            <li><i class="fa fa-check-circle me-2"></i>Menjadi persekutuan yang menghidupi keadilan</li>
+                            <li><i class="fa fa-check-circle me-2"></i>Menjadi pribadi teladan dalam melaksanakan kebenaran Allah</li>
+                            <li><i class="fa fa-check-circle me-2"></i>Mendorong pemulihan bagi seluruh ciptaan melalui kepedulian lingkungan, keadilan sosial, dan hidup yang berkelanjutan</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Carousel End -->
+</section>
+<!-- Hero / Welcome End -->
 
 <!-- jadwal Start -->
 <div class="container-xxl section-padding" id="section_2">
@@ -469,7 +476,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/bupen.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -488,7 +495,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/pnt_sumantri.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -507,7 +514,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/pnt_sarwoto.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -526,7 +533,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/pnt_rudy.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -545,7 +552,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/pnt_sylvi.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -564,7 +571,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/dkn_eva.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -583,7 +590,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/avatar_girl.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/dkn_novny.jpg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
