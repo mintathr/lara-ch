@@ -37,7 +37,7 @@
         ],
         [
             'name' => 'Pnt. Ryan Kiryanto', 
-            'image' => 'assets_skklweb/img/avatar.jpg', 
+            'image' => 'assets_skklweb/img/presbiter/pnt_ryan.jpg', 
             'wa' => '6281807464645', 
             'delay' => '0.13s'
         ],
@@ -67,7 +67,7 @@
         ],
         [
             'name' => 'Pnt. Yanise Daeli', 
-            'image' => 'assets_skklweb/img/avatar_girl.jpg', 
+            'image' => 'assets_skklweb/img/presbiter/pnt_yanise.jpg', 
             'wa' => '6281286918205', 
             'delay' => '0.3s'
         ],

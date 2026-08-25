@@ -25,13 +25,13 @@
         ],
         [
             'name' => 'Dkn. Debby Fangidae', 
-            'image' => 'assets_skklweb/img/avatar_girl.jpg', 
+            'image' => 'assets_skklweb/img/presbiter/dkn_debby_f.jpg', 
             'wa' => '6285310799270', 
             'delay' => '0.7s'
         ],
         [
             'name' => 'Dkn. Delima Tengker', 
-            'image' => 'assets_skklweb/img/avatar_girl.jpg', 
+            'image' => 'assets_skklweb/img/presbiter/dkn_delima.jpg', 
             'wa' => '6285319633307', 
             'delay' => '0.9s'
         ],
@@ -94,7 +94,8 @@
             'image' => 'assets_skklweb/img/presbiter/dkn_vega.jpg', 
             'wa' => '6282231675774', 
             'delay' => '0.29s'
-        ],
+        ]
+        
     ];
 @endphp
 

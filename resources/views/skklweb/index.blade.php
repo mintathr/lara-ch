@@ -42,6 +42,16 @@
         min-width: 0; /* penting agar teks wrapping bekerja di flex */
     }
 
+    .team-item .overflow-hidden {
+        height: 300px;
+    }
+
+    .team-item .overflow-hidden img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     /* Responsif: tumpuk kolom pada layar kecil */
     @media (max-width: 991.98px) {
         .popup-jemaat-body {
@@ -476,18 +486,18 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/bupen.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('assets_skklweb/img/presbiter/pdt_leli.jpeg') }}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/6281365646316"
+                            <a class="btn btn-sm-square btn-primary mx-1" href="https://wa.me/#"
                                 target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0"> Pdt. Clara Y. Aipasa</h5>
+                        <h5 class="mb-0"> Pdt. Wilhelmina Lawalata</h5>
                         <small>Ketua Majelis Jemaat</small>
                     </div>
                 </div>
@@ -671,21 +681,18 @@
 <!-- end maps -->
 
 <!-- Modal Pop-up -->
-    <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content popup-jemaat-content shadow-lg">
             <div class="modal-body p-0 position-relative popup-jemaat-body">
                 
-                <!-- Tombol Close -->
                 <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3 bg-white p-2 rounded-circle shadow-sm" data-bs-dismiss="modal" aria-label="Close"></button>
                 
                 <div class="row g-0 align-items-center">
-                    <!-- Kolom Gambar dengan kelas unik -->
                     <div class="col-lg-5 popup-jemaat-left bg-dark d-flex justify-content-center align-items-center p-0">
                         <img src="{{ url('assets_skklweb/img/sertijab.jpeg') }}" alt="Utus Sambut" class="popup-jemaat-img">
                     </div>
                     
-                    <!-- Kolom Konten Pengumuman -->
                     <div class="col-lg-7 popup-jemaat-right p-4 p-lg-5">
                         <span class="badge bg-danger mb-2">Pengumuman Penting</span>
                         <h4 class="fw-bold mb-3" id="announcementModalLabel">Utus Sambut Ketua Majelis Jemaat</h4>
@@ -717,17 +724,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
     <!-- Script untuk Otomatis Menampilkan Pop-up saat Halaman Dimuat -->
      
-    <script>
+    <!-- <script>
         var myModal;
         document.addEventListener("DOMContentLoaded", function() {
             var modalEl = document.getElementById('announcementModal');
             myModal = new bootstrap.Modal(modalEl);
             myModal.show();
         });
-    </script>
+    </script> -->
   
 
 @endsection
